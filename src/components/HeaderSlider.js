@@ -102,6 +102,8 @@ const HeaderSlider = () => {
                   width: "190px",
                   maxHeight: "50%",
                   objectFit: "contain",
+                  filter:
+                    "drop-shadow(0px calc(0.25 * 1rem) calc(0.25 * 2rem) hsla(222deg 33% 4% / 1)",
                 }}
               />
             </div>
