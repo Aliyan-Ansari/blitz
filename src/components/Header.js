@@ -21,12 +21,12 @@ const Header = () => {
           <BsPersonCircle style={{ marginRight: 10 }} /> Sign In
         </a>
         {/* <a className={Object.assign(classes.headerButton, classes.window)}> */}
-        <a
+        {/* <a
           className={`${classes.headerButton} ${classes.window}`}
           title="Windows 64-bit"
         >
           <AiFillWindows style={{ marginRight: 10 }} /> Download
-        </a>
+        </a> */}
       </div>
       <div style={{ margin: "5px 10px", padding: "5px", position: "relative" }}>
         <FaSearch

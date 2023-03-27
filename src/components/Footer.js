@@ -68,12 +68,12 @@ const Footer = () => {
                   </defs>
                 </svg>
               </div>
-              <span className={classes.logo}>BLITZ</span>
+              <span className={classes.logo}>PORTAL.IO</span>
             </div>
-            <a className={`${classes.downloadAction}`} title="Windows 64-bit">
+            {/* <a className={`${classes.downloadAction}`} title="Windows 64-bit">
               <AiFillWindows style={{ fontSize: 24, marginRight: 10 }} />{" "}
               Download
-            </a>
+            </a> */}
             <a className={`${classes.punchAction} `} title="Windows 64-bit">
               <GiPunch style={{ fontSize: 24, marginRight: 10 }} /> Riot Games
               Compliant
