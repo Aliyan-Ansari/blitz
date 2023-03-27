@@ -13,16 +13,19 @@ const icons = [
     icon: <BsFillPersonFill className={classes.icon} />,
     title: "Guest Account",
   },
-  {
-    icon: <HiOutlineDownload className={classes.icon} />,
-    title: "Download Blitz",
-  },
+  // {
+  //   icon: <HiOutlineDownload className={classes.icon} />,
+  //   title: "Download Portal.io",
+  // },
   { icon: <IoMdSettings className={classes.icon} />, title: "Settings" },
   {
     icon: <BsPersonCircle className={classes.icon} />,
     title: "Sign Up for Account",
   },
-  { icon: <GiQueenCrown className={classes.icon} />, title: "Get Blitz Pro" },
+  {
+    icon: <GiQueenCrown className={classes.icon} />,
+    title: "Get Portal.io Pro",
+  },
   { icon: <FaWallet className={classes.icon} />, title: "Wallet" },
   { icon: <BsPersonPlusFill className={classes.icon} />, title: "Coming Soon" },
 ];
