@@ -332,7 +332,7 @@ const GameDetails = () => {
           >
             <div
               style={{
-                width: "325px",
+                width: "317px",
                 height: "400px",
                 position: "relative",
                 borderRadius: "10px",

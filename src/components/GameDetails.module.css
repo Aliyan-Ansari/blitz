@@ -52,12 +52,13 @@
     padding: calc(0.25 * 4rem) calc(0.25 * 6rem);
     background-color: hsla(222deg 6% 30% / 0.25);
     outline: 2px solid transparent;
+    border: 3px solid transparent;
 }
 .tag::before {
 content: '';
 position: absolute;
 inset: 0;
-box-shadow: inset 0px 1px 0px rgba(227, 229, 234, 0.05) ;
+/* box-shadow: inset 0px 1px 3px rgba(227, 229, 234, 0.05) ; */
 /* -webkit-backdrop-filter: blur(0.4px); */
 /* backdrop-filter: blur(0.4px); */
 }
