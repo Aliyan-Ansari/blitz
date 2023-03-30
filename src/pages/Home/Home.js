@@ -1,4 +1,5 @@
 import React from "react";
+import GameDetails from "../../components/GameDetails";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import HeaderSlider from "../../components/HeaderSlider";
@@ -16,9 +17,10 @@ const Home = () => {
           <Header />
           <div className={classes.mainContent}>
             <HeaderSlider />
+            <GameDetails />
           </div>
           <div className={classes.footer}>
-            <Footer/>
+            <Footer />
           </div>
         </div>
         <div className={classes.secondarySidebar}>

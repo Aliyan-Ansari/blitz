@@ -49,7 +49,7 @@ const HeaderSlider = () => {
             flexDirection: "column",
             marginRight: 5,
             marginLeft: 5,
-            borderRadius: "10px",
+            cursor: "pointer",
           }}
         >
           <div
@@ -71,6 +71,7 @@ const HeaderSlider = () => {
                 width: "190px",
                 height: "100%",
                 objectFit: "cover",
+                borderRadius: "10px",
               }}
             />
             <img
@@ -79,16 +80,13 @@ const HeaderSlider = () => {
               style={{
                 position: "absolute",
                 bottom: "10px",
-                left: "10px",
                 width: "190px",
                 maxHeight: "50%",
                 objectFit: "contain",
               }}
             />
           </div>
-          <h4
-            style={{ textAlign: "center", margin: "10px 0", color: "#E2E4E9" }}
-          >
+          <h4 style={{ textAlign: "left", margin: "10px 0", color: "#E2E4E9" }}>
             {value.title}
           </h4>
         </div>
