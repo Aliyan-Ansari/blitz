@@ -1,0 +1,76 @@
+.sidebar {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0e1015;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.logoContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 8px 8px 32px;
+    margin-bottom: 20px;
+
+}
+.logoIcon{
+margin-right: 27px;
+}
+.logo{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.1cm;
+}
+.listWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ul{
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 33px;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #7e828b;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.row:hover{
+color:white;
+}
+.title{
+    font-weight: bold;
+    font-size: 16px;
+}
+.icon{
+    font-size: 24px;
+    margin-right: 28px;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}

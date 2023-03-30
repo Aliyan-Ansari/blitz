@@ -1,0 +1,33 @@
+.home{
+    width: 100%;
+    height: 100%;
+    background-color: #0e1015;
+}
+.mainContainer{
+    width: 100%;
+    display: flex;
+    background-color: #0e1015;
+
+}
+.primarySidebar{
+   width: 22%;
+   background-color: white;
+
+}
+.mainWrapper{
+width: 56%;
+background-color: red;
+}
+.header{
+
+}
+.mainContent{
+
+}
+.footer{
+
+}
+.secondarySidebar{
+    width: 22%;
+    background-color: white;
+}
