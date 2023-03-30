@@ -1,5 +1,18 @@
 import React, { useState } from "react";
+import { Tilt } from "react-tilt";
 import classes from "./HeaderSlider.module.css";
+
+const defaultOptions = {
+  reverse: false, // reverse the tilt direction
+  max: 15, // max tilt rotation (degrees)
+  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+  scale: 1.03, // 2 = 200%, 1.5 = 150%, etc..
+  speed: 3000, // Speed of the enter/exit transition
+  transition: true, // Set a transition on enter/exit.
+  axis: null, // What axis should be disabled. Can be X or Y.
+  reset: true, // If the tilt effect has to be reset on exit.
+  easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+};
 
 const HeaderSlider = () => {
   const [games, setGames] = useState([
@@ -47,45 +60,52 @@ const HeaderSlider = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            marginRight: 5,
-            marginLeft: 5,
+            marginRight: 6,
+            marginLeft: 6,
             cursor: "pointer",
           }}
         >
-          <div
-            style={{
-              width: "190px",
-              height: "250px",
-              position: "relative",
-              display: "flex",
-              borderRadius: 5,
-            }}
+          <Tilt
+            options={defaultOptions}
+            style={{ height: "240px", width: "190px" }}
           >
-            <img
-              src={value.coverImage}
-              alt="Cover Image"
+            <div
               style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
                 width: "190px",
-                height: "100%",
-                objectFit: "cover",
-                borderRadius: "10px",
+                height: "230px",
+                marginTop: "5px",
+                position: "relative",
+                display: "flex",
+                borderRadius: "13px",
               }}
-            />
-            <img
-              src={value.titleImage}
-              alt="Title Image"
-              style={{
-                position: "absolute",
-                bottom: "10px",
-                width: "190px",
-                maxHeight: "50%",
-                objectFit: "contain",
-              }}
-            />
-          </div>
+              className={classes.headerCard}
+            >
+              <img
+                src={value.coverImage}
+                alt="Cover Imge"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "190px",
+                  height: "100%",
+                  objectFit: "cover",
+                  borderRadius: "10px",
+                }}
+              />
+              <img
+                src={value.titleImage}
+                alt="Title Imge"
+                style={{
+                  position: "absolute",
+                  bottom: "10px",
+                  width: "190px",
+                  maxHeight: "50%",
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+          </Tilt>
           <h4 style={{ textAlign: "left", margin: "10px 0", color: "#E2E4E9" }}>
             {value.title}
           </h4>

@@ -1,7 +1,7 @@
 .sidebar {
     height: 100%;
-    width: 60px;
     position: fixed;
+    width:  calc(calc(0.25 * 1rem) * 18);
     z-index: 1;
     top: 0;
     right: 0;

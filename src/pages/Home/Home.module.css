@@ -10,23 +10,34 @@
 
 }
 .primarySidebar{
-   width: 30%;
-   background-color: white;
-
+    flex: 1;
+   /* background-color: white; */
 }
 .mainWrapper{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    margin-left: calc(calc(0.25 * 1rem) * 60);
+    margin-right: calc(calc(0.25 * 1rem) * 18);
     width: 100%;
-    background-color: #0F1015;
+    --scroll-color: hsla(222deg 7% 30% / 0.5)
+    /* background-color: #0F1015; */
+    background: hsla(222deg 20% 7% / 1);
+
 }
 .header{
 }
 .mainContent{
-
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .footer{
 
 }
 .secondarySidebar{
-    width: 90px;
-    background-color: white;
+    /* width: 90px; */
+    /* background-color: white; */
 }

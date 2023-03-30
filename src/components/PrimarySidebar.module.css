@@ -1,16 +1,18 @@
 .sidebar {
     height: 100%;
-    width: 20%;
+    width: calc(calc(0.25 * 1rem) * 60);
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #0e1015;
+    background-color: #101318;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 30px;
     white-space: nowrap;
     box-sizing: border-box;
+    border-right: 1px solid hsla(222deg 14% 11% / 1);
+    box-shadow: 0 0 calc(0.25 * 2rem) hsla(222deg 33% 4% / 1);
 }
 .logoContainer{
     display: flex;

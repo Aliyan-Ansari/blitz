@@ -1,8 +1,33 @@
 .gameDetails {
+    max-width: calc(62.5rem + calc(0.25 * 4rem) * 2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.gameDetailsCards {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+}
 
+.detailsHeading {
+    display: flex;
+    align-items: flex-end;
+    grid-gap: calc(0.25 * 3rem);
+    gap: var(0.25 * 3rem);
+    width: 100%;
+    padding: calc(0.25 * 4rem);
+    padding-bottom: 0;
+    font-weight: 700;
+    font-size: calc(0.25 * 5rem);
+    letter-spacing: -0.009em;
+    color: hsla(222deg 14% 90% / 1);
+}
+.detailsHeading span {
+    color:hsla(222deg 5% 62% / 1)
 }

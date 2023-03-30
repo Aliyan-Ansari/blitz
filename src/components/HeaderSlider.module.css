@@ -1,6 +1,7 @@
 .headerSlider {
     /* height: 64px; */
     /* margin-top: 20px; */
+    max-width: calc(62.5rem + calc(0.25 * 4rem) * 2);
     display: flex;
     overflow-x: auto;
     align-items: center;
@@ -8,4 +9,16 @@
     margin-top: 40px;
     /* justify-content: space-between; */
     /* background-color: aqua; */
+}
+
+.headerCard::before{
+    content: '';
+    inset: 0;
+    background: radial-gradient( 152.75% 153.33% at 54.4% 0%, rgba(21, 24, 30, 0) 13.7%, #15181e 100% );
+    mix-blend-mode: multiply;
+    z-index: 222222222;
+}
+
+.headerCard:hover {
+    border: 3px solid #8C8E93
 }

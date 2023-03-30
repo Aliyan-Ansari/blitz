@@ -310,156 +310,163 @@ const GameDetails = () => {
 
   return (
     <div className={classes.gameDetails}>
-      {games.map((value) => (
-        <div
-          style={{
-            width: "325px",
-            height: "400px",
-            position: "relative",
-            borderRadius: "10px",
-            overflow: "hidden",
-            margin: 8,
-            cursor: "pointer",
-          }}
-        >
+      <h2 className={classes.detailsHeading}>
+        The Latest<span>Take a look at what's new, right now.</span>
+      </h2>
+      <div className={classes.gameDetailsCards}>
+        {games.map((value) => (
           <div
             style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              backgroundImage: `url(${value.coverImage})`,
-              backgroundSize: "cover",
-              filter: "brightness(50%)",
-            }}
-          ></div>
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              padding: "20px",
+              width: "325px",
+              height: "400px",
+              position: "relative",
+              borderRadius: "10px",
+              overflow: "hidden",
+              margin: 8,
+              cursor: "pointer",
             }}
           >
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <h4
-                style={{
-                  fontSize: "14px",
-                  fontWeight: "bold",
-                  marginRight: "10px",
-                  color: "#DFE1E6",
-                }}
-              >
-                {value.title}
-              </h4>
-              <div
-                style={{
-                  backgroundColor: "hsla(160, 80%, 40%, 0.5)",
-                  padding: "5px 10px",
-                  borderRadius: "20px",
-                }}
-              >
-                <span style={{ color: "white", fontWeight: "bold" }}>New</span>
-              </div>
-              <img
-                src={value.icon}
-                alt="Icon"
-                style={{ marginLeft: "auto", width: "30px", height: "30px" }}
-              />
-            </div>
-            <p
-              style={{
-                fontSize: "16px",
-                marginBottom: "20px",
-                color: "#787C85",
-              }}
-            >
-              {value.description}
-            </p>
             <div
               style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                backgroundImage: `url(${value.coverImage})`,
+                backgroundSize: "cover",
+                filter: "brightness(50%)",
+              }}
+            ></div>
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
                 display: "flex",
-                alignItems: "center",
-                fontSize: "14px",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                padding: "20px",
               }}
             >
-              <span style={{ marginRight: "10px" }}>View Champion</span>
-              <a
-                href="#"
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <h4
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "bold",
+                    marginRight: "10px",
+                    color: "#DFE1E6",
+                  }}
+                >
+                  {value.title}
+                </h4>
+                <div
+                  style={{
+                    backgroundColor: "hsla(160, 80%, 40%, 0.5)",
+                    padding: "5px 10px",
+                    borderRadius: "20px",
+                  }}
+                >
+                  <span style={{ color: "white", fontWeight: "bold" }}>
+                    New
+                  </span>
+                </div>
+                <img
+                  src={value.icon}
+                  alt="Icon"
+                  style={{ marginLeft: "auto", width: "30px", height: "30px" }}
+                />
+              </div>
+              <p
                 style={{
-                  color: "hsla(160, 80%, 40%, 1)",
-                  textDecoration: "none",
+                  fontSize: "16px",
+                  marginBottom: "20px",
+                  color: "#787C85",
                 }}
               >
-                <span
+                {value.description}
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  fontSize: "14px",
+                }}
+              >
+                <span style={{ marginRight: "10px" }}>View Champion</span>
+                <a
+                  href="#"
                   style={{
-                    display: "inline-block",
-                    width: "10px",
-                    height: "10px",
-                    borderTop: "2px solid currentColor",
-                    borderRight: "2px solid currentColor",
-                    transform: "rotate(45deg)",
-                    marginLeft: "5px",
+                    color: "hsla(160, 80%, 40%, 1)",
+                    textDecoration: "none",
                   }}
-                ></span>
-              </a>
+                >
+                  <span
+                    style={{
+                      display: "inline-block",
+                      width: "10px",
+                      height: "10px",
+                      borderTop: "2px solid currentColor",
+                      borderRight: "2px solid currentColor",
+                      transform: "rotate(45deg)",
+                      marginLeft: "5px",
+                    }}
+                  ></span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        // <div
-        //   style={{
-        //     display: "flex",
-        //     flexDirection: "column",
-        //     marginRight: 5,
-        //     marginLeft: 5,
-        //     cursor: "pointer",
-        //   }}
-        // >
-        //   <div
-        //     style={{
-        //       width: "190px",
-        //       height: "250px",
-        //       position: "relative",
-        //       display: "flex",
-        //       borderRadius: 5,
-        //     }}
-        //   >
-        //     <img
-        //       src={value.coverImage}
-        //       alt="Cover Image"
-        //       style={{
-        //         position: "absolute",
-        //         top: 0,
-        //         left: 0,
-        //         width: "190px",
-        //         height: "100%",
-        //         objectFit: "cover",
-        //         borderRadius: "10px",
-        //       }}
-        //     />
-        //     <img
-        //       src={value.titleImage}
-        //       alt="Title Image"
-        //       style={{
-        //         position: "absolute",
-        //         bottom: "10px",
-        //         width: "190px",
-        //         maxHeight: "50%",
-        //         objectFit: "contain",
-        //       }}
-        //     />
-        //   </div>
-        //   <h4 style={{ textAlign: "left", margin: "10px 0", color: "#E2E4E9" }}>
-        //     {value.title}
-        //   </h4>
-        // </div>
-      ))}
+          // <div
+          //   style={{
+          //     display: "flex",
+          //     flexDirection: "column",
+          //     marginRight: 5,
+          //     marginLeft: 5,
+          //     cursor: "pointer",
+          //   }}
+          // >
+          //   <div
+          //     style={{
+          //       width: "190px",
+          //       height: "250px",
+          //       position: "relative",
+          //       display: "flex",
+          //       borderRadius: 5,
+          //     }}
+          //   >
+          //     <img
+          //       src={value.coverImage}
+          //       alt="Cover Image"
+          //       style={{
+          //         position: "absolute",
+          //         top: 0,
+          //         left: 0,
+          //         width: "190px",
+          //         height: "100%",
+          //         objectFit: "cover",
+          //         borderRadius: "10px",
+          //       }}
+          //     />
+          //     <img
+          //       src={value.titleImage}
+          //       alt="Title Image"
+          //       style={{
+          //         position: "absolute",
+          //         bottom: "10px",
+          //         width: "190px",
+          //         maxHeight: "50%",
+          //         objectFit: "contain",
+          //       }}
+          //     />
+          //   </div>
+          //   <h4 style={{ textAlign: "left", margin: "10px 0", color: "#E2E4E9" }}>
+          //     {value.title}
+          //   </h4>
+          // </div>
+        ))}
+      </div>
     </div>
   );
 };
