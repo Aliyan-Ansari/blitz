@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './SecondarySidebar.module.css';
 import {BsPersonCircle} from 'react-icons/bs';
 import {HiOutlineDownload} from 'react-icons/hi';
@@ -19,19 +19,39 @@ const icons = [
   
   ]
 const SecondarySidebar = () => {
-  return (
-    <div className={classes.sidebar}>
+    const [isMini, setIsMini] = useState(true);
+
+    function toggleSidebar() {
+        if (isMini) {
+            setTimeout(()=>
+            {
+                document.getElementById("mySidebar").style.width = "20%";
+                setIsMini(false);
+            },500)
+        } else {
+            setTimeout(()=>
+            {
+                document.getElementById("mySidebar").style.width = "60px";
+                setIsMini(true);
+            },500)
+        }
+    }
+    return (
+    <div className={classes.sidebar} onMouseEnter={toggleSidebar} onMouseLeave={toggleSidebar} id="mySidebar">
         <div className={classes.listWrapper}>
           <ul className={classes.ul}>
             {
-              icons.map((ele)=>
-              <div className={classes.row}>{ele.icon}
-              <li className={classes.title}>{ele.title}</li>
+              icons.map((ele,index)=>
+              <>
               {
-                ele.title === 'Coming Soon'&& <hr style={{color:'white'}}/>
-              }
+                  ele.title === 'Coming Soon'&& <div style={{display:'block', width:'100%',marginBottom:'30px',borderBottom:'1px solid #7e828b'}}/>
+                }
+              <div className={classes.row} style={{ margin: index===0 &&  '10px 0px 35px 0px' }}>
+                {ele.icon}
+              <li className={classes.title}>{ele.title}</li>
               
               </div>
+                </>
               
               )
             }
