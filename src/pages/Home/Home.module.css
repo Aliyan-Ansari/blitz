@@ -10,12 +10,12 @@
 
 }
 .primarySidebar{
-   width: 22%;
+   width: 30%;
    background-color: white;
 
 }
 .mainWrapper{
-    width: 66%;
+    width: 100%;
     background-color: #0F1015;
 }
 .header{
@@ -27,6 +27,6 @@
 
 }
 .secondarySidebar{
-    width: 22%;
+    width: 90px;
     background-color: white;
 }

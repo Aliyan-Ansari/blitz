@@ -17,6 +17,18 @@ const Header = () => {
   return (
     <div className={classes.header}>
       <div></div>
+      <div className={classes.actions}>
+        <a className={`${classes.headerButton} ${classes.signIn}`}>
+          <BsPersonCircle style={{marginRight:10}}/> Sign In
+        </a>
+        {/* <a className={Object.assign(classes.headerButton, classes.window)}> */}
+        <a
+          className={`${classes.headerButton} ${classes.window}`}
+          title="Windows 64-bit"
+        >
+          <AiFillWindows style={{marginRight:10}}/> Download
+        </a>
+      </div>
       <div style={{ margin: "5px 10px", padding: "5px", position: "relative" }}>
         <FaSearch
           style={{
@@ -46,18 +58,7 @@ const Header = () => {
           placeholder="Search profiles, champions, agents, legends, and more!"
         />
       </div>
-      <div>
-        <a className={`${classes.headerButton} ${classes.signIn}`}>
-          <BsPersonCircle /> Sign In
-        </a>
-        {/* <a className={Object.assign(classes.headerButton, classes.window)}> */}
-        <a
-          className={`${classes.headerButton} ${classes.window}`}
-          title="Windows 64-bit"
-        >
-          <AiFillWindows /> Download
-        </a>
-      </div>
+ 
     </div>
   );
 };
