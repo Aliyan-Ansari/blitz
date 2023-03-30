@@ -1,6 +1,5 @@
 import React from 'react'
 import classes from './PrimarySidebar.module.css';
-import AiOutlineThunderbolt from 'react-icons/ai';
 import {AiFillHome} from 'react-icons/ai';
 import {BsFillLayersFill} from 'react-icons/bs';
 import {BiBookBookmark} from 'react-icons/bi';

@@ -1,5 +1,6 @@
 import React from 'react'
 import PrimarySidebar from '../../components/PrimarySidebar';
+import SecondarySidebar from '../../components/SecondarySidebar';
 import classes from './Home.module.css';
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
         <div className={classes.footer}>Footer</div>
         </div>
         <div className={classes.secondarySidebar}>
-        secondarySidebar
+        <SecondarySidebar/>
         </div>
         </div>
     </div>
