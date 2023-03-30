@@ -1,0 +1,25 @@
+.headerSlider {
+    /* height: 64px; */
+    /* margin-top: 20px; */
+    display: flex;
+    overflow-x: auto;
+    /* justify-content: space-between; */
+    /* background-color: aqua; */
+}
+
+.headerButton {
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.signIn {
+    color: hsla(222deg 5% 62%);
+    background-color: #272a30;
+}
+
+.window {
+    color: white;
+    background-color: #dd364d;
+}
