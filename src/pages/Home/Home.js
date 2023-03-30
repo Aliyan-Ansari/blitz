@@ -1,25 +1,29 @@
-import React from 'react'
-import PrimarySidebar from '../../components/PrimarySidebar';
-import SecondarySidebar from '../../components/SecondarySidebar';
-import classes from './Home.module.css';
+import React from "react";
+import Header from "../../components/Header";
+import HeaderSlider from "../../components/HeaderSlider";
+import PrimarySidebar from "../../components/PrimarySidebar";
+import SecondarySidebar from "../../components/SecondarySidebar";
+import classes from "./Home.module.css";
 const Home = () => {
   return (
     <div className={classes.home}>
-        <div className={classes.mainContainer}>
+      <div className={classes.mainContainer}>
         <div className={classes.primarySidebar}>
-        <PrimarySidebar/>
+          <PrimarySidebar />
         </div>
         <div className={classes.mainWrapper}>
-        <div className={classes.header}>header</div>
-        <div className={classes.mainContent}>mainContent</div>
-        <div className={classes.footer}>Footer</div>
+          <Header />
+          <div className={classes.mainContent}>
+            <HeaderSlider />
+          </div>
+          <div className={classes.footer}>Footer</div>
         </div>
         <div className={classes.secondarySidebar}>
-        <SecondarySidebar/>
+          <SecondarySidebar />
         </div>
-        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
