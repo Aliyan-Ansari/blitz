@@ -12,7 +12,6 @@ const icons = [
 ]
 const PrimarySidebar = () => {
   return (
-    // onmouseover="toggleSidebar()" onmouseout="toggleSidebar()" id="mySidebar"
 <div className={classes.sidebar}>
     <div className={classes.mainWrapper}>
         <div className={classes.logoContainer}>
