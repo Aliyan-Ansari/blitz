@@ -1,33 +1,33 @@
 .header {
-    /* height: 64px; */
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    /* background-color: aqua; */
-    position: sticky;
+  height: 168px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: aqua; */
+  position: sticky;
 }
-.actions{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 .headerButton {
-    display: flex;
-    align-items: center;
-    padding: 10px 12px;
-    border-radius: 6px;
-    margin-right: 6px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-right: 6px;
+  cursor: pointer;
 }
 
 .signIn {
-    color: hsla(222deg 5% 62%);
-    background-color: #272a30;
+  color: hsla(222deg 5% 62%);
+  background-color: #272a30;
 }
 
 .window {
-    color: white;
-    background-color: #dd364d;
+  color: white;
+  background-color: #dd364d;
 }
