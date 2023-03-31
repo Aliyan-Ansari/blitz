@@ -31,3 +31,59 @@
 .detailsHeading span {
     color:hsla(222deg 5% 62% / 1)
 }
+.subSection {
+    text-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    margin-bottom: 18px;
+}
+.tag {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: calc(0.25 * 4rem) calc(0.25 * 6rem);
+    background-color: hsla(222deg 6% 30% / 0.25);
+    outline: 2px solid transparent;
+}
+.tag::before {
+content: '';
+position: absolute;
+inset: 0;
+box-shadow: inset 0px 1px 0px rgba(227, 229, 234, 0.05) ;
+/* -webkit-backdrop-filter: blur(0.4px); */
+/* backdrop-filter: blur(0.4px); */
+}
+.tag:hover {
+    border: 3px solid #818590;
+}
+
+.tagContent {
+    text-shadow: none;
+    display: flex;
+    align-items: center;
+
+}
+.tagIcon {
+    height: calc(0.25 * 6rem);
+    width: calc(0.25 * 6rem);
+}
+.tagTitle {
+    text-shadow: none;
+    font-weight: 600;
+    font-size: calc(0.25 * 3.5em);
+    margin-bottom: 5px;
+    margin-left: 12px;
+    color: #DDDFE4;
+}
+.tagArrow {
+    text-shadow: none;
+
+}
