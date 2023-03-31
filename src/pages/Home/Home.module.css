@@ -42,3 +42,16 @@
     /* width: 90px; */
     /* background-color: white; */
 }
+
+
+@media screen and (max-width: 1510px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 18);
+    }
+}
+
+@media screen and (min-width: 1511px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 60);
+    }
+}

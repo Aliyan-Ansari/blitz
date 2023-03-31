@@ -18,7 +18,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 22px;
     margin-bottom: 20px;
     cursor: pointer;
 
@@ -42,7 +42,7 @@ margin-right: 27px;
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding-left: 33px;
+    padding-left: 22px;
     box-sizing: border-box;
 }
 .row{
@@ -79,5 +79,17 @@ color:#e2e4e9;
     }
     .sidebar a {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1510px) {
+    .sidebar {
+        width: calc(calc(0.25 * 1rem) * 18);
+    }
+}
+
+@media screen and (min-width: 1511px) {
+    .sidebar {
+        width: calc(calc(0.25 * 1rem) * 60);
     }
 }
