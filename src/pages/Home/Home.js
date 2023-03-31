@@ -6,6 +6,7 @@ import HeaderSlider from "../../components/HeaderSlider";
 import PrimarySidebar from "../../components/PrimarySidebar";
 import SecondarySidebar from "../../components/SecondarySidebar";
 import classes from "./Home.module.css";
+import DetailSection from "../../components/DetailSection";
 const Home = () => {
   return (
     <div className={classes.home}>
@@ -18,6 +19,7 @@ const Home = () => {
           <div className={classes.mainContent}>
             <HeaderSlider />
             <GameDetails />
+            <DetailSection />
           </div>
           <div className={classes.footer}>
             <Footer />
