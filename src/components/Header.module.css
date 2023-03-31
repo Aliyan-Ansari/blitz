@@ -5,13 +5,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* background-color: aqua; */
   position: sticky;
+  top: 0;
 }
 .actions {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  position: sticky;
 }
 .headerButton {
   display: flex;

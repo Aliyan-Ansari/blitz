@@ -1,30 +1,32 @@
 .footer {
   width: 100%;
-  height: 400px;
+  /* height: 400px; */
   background-color: #13151b;
 }
 .row {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  /* align-items: flex-end; */
 }
 .col {
-  flex: 3;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
 }
 .actionCol {
-  flex: 2;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  padding-left: 40px;
+  justify-content: space-around;
+  align-items: center;
+  /* padding-left: 40px; */
   padding-top: 10px;
-  /* align-items: center; */
 }
+
 .downloadAction {
-  width: 60%;
+  width: 245px;
   display: flex;
   align-items: center;
   padding: 10px 12px;
@@ -38,10 +40,11 @@
 }
 .downloadAction:hover {
   opacity: 1;
+  /* padding: 12px 14px; */
 }
 
 .punchAction {
-  width: 60%;
+  width: 245px;
   display: flex;
   align-items: center;
   padding: 10px 12px;
@@ -59,6 +62,7 @@
   color: white;
 }
 .table {
+  width: 100%;
   margin-top: 50px;
   color: white;
 }
@@ -69,7 +73,7 @@
   font-size: 12px;
 }
 .table tr td {
-  padding: 10px;
+  padding: 5px;
   padding-right: 70px;
   cursor: pointer;
   font-weight: bold;
@@ -79,7 +83,7 @@
   color: #999ca3;
 }
 .table tr th {
-  padding: 10px;
+  padding: 5px;
   padding-right: 70px;
 }
 
@@ -92,12 +96,9 @@
   margin-bottom: 40px;
   cursor: pointer;
 }
-.logoIcon {
-  /* margin-right: 20px; */
-}
+
 .logo {
   font-size: 18px;
-  /* line-height: 20px; */
   font-weight: bold;
   color: white;
   letter-spacing: 0.1cm;
@@ -109,7 +110,7 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.info {
+.table tr .info {
   color: #999ca3;
   font-weight: 600;
   font-size: 12px;
@@ -117,11 +118,15 @@
   cursor: pointer;
 }
 .madeWith {
+  width: 100%;
+  margin-bottom: 28px;
   color: #999ca3;
   font-weight: 600;
   font-size: 12px;
   line-height: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
-.info:hover {
+.table tr .info:hover {
   color: #7c7e81;
 }
