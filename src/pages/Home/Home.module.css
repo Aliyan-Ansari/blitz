@@ -47,6 +47,7 @@
 @media screen and (max-width: 1510px) {
     .mainWrapper {
         margin-left: calc(calc(0.25 * 1rem) * 18);
+        overflow-y: hidden;
     }
 }
 

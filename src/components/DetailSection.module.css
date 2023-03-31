@@ -6,7 +6,7 @@
   width: 100%;
   height: 500px;
   padding: 20px;
-  background-image: url("https://blitz-cdn.blitz.gg/homepage/download-banner-bg.webp");
+  background: linear-gradient(180deg, hsla(222deg 20% 7% / 1) 0%, hsla(222deg 20% 7% / 0.5) 100%), radial-gradient( 49.96% 100% at 49.96% 0%, hsla(222deg 20% 7% / 0.5) 48.01%, hsla(222deg 20% 7% / 1) 100% ), url(https://blitz-cdn.blitz.gg/homepage/download-banner-bg.webp);
   text-align: center;
   background-position: 25% 50%;
   background-size: 150% auto;
