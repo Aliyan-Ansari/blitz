@@ -38,3 +38,60 @@
   color: white;
   background-color: #dd364d;
 }
+
+.searchInput {
+  padding-left: 45px;
+  border-radius: 5px;
+  width: 584px;
+  height: 56px;
+  border: none;
+  outline: none;
+  font-size: 18;
+}
+.logoContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 8px 8px 22px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+}
+.logoIcon{
+margin-right: 15px;
+}
+.logo{
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.1cm;
+}
+
+.searchDiv {
+  /* width: 100%; */
+}
+
+@media screen and (max-width: 1024px) {
+  .searchInput {
+    width:  100%;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .header {
+    height: 65px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .logoContainer{ 
+    padding: 8px 8px 8px 0px;
+  }
+  .searchDiv {
+    width: 77vw;
+    position: absolute;
+    left: -87px;
+  }
+}
+
+

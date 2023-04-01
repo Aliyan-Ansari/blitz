@@ -34,6 +34,7 @@
     justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 .footer{
 
@@ -41,6 +42,12 @@
 .secondarySidebar{
     /* width: 90px; */
     /* background-color: white; */
+}
+
+
+
+.mobileIcons {
+    display: none;
 }
 
 
@@ -54,5 +61,28 @@
 @media screen and (min-width: 1511px) {
     .mainWrapper {
         margin-left: calc(calc(0.25 * 1rem) * 60);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 4);
+        margin-right: calc(calc(0.25 * 1rem) * 4);
+        overflow-y: hidden;
+    }
+    .mobileIcons {
+        padding-top: 4px;
+        margin-right: 25px;
+        display: block;
+    }
+    .headerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 11111;
+        width: 98%;
+        background-color: hsla(222deg 20% 7% / 0.75);
+        backdrop-filter: blur(20px);
     }
 }

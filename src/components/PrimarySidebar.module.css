@@ -2,7 +2,7 @@
     height: 100%;
     width: calc(calc(0.25 * 1rem) * 60);
     position: fixed;
-    z-index: 1;
+    z-index: 99999999;
     top: 0;
     left: 0;
     background-color: #101318;
@@ -89,6 +89,12 @@ color:#e2e4e9;
 }
 
 @media screen and (min-width: 1511px) {
+    .sidebar {
+        width: calc(calc(0.25 * 1rem) * 60);
+    }
+}
+
+@media screen and (max-width: 520px) {
     .sidebar {
         width: calc(calc(0.25 * 1rem) * 60);
     }

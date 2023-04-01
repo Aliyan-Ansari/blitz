@@ -9,8 +9,7 @@
   margin-top: 40px;
   padding: 0px 10px;
   box-sizing: border-box;
-  /* justify-content: space-between; */
-  /* background-color: aqua; */
+  width: 100%;
 }
 
 .headerCard::before {
@@ -28,3 +27,17 @@
 .headerCard:hover {
   border: 3px solid #8c8e93;
 }
+
+@media screen and (max-width: 1024px) {
+  .headerSlider {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .headerSlider {
+    margin-top: 160px;
+  }
+}
+
+
