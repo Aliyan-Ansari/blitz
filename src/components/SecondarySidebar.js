@@ -34,17 +34,13 @@ const SecondarySidebar = () => {
 
   function toggleSidebar() {
     if (isMini) {
-      setTimeout(() => {
         document.getElementById("mySidebar").style.width =
           "calc(calc(0.25 * 1rem) * 60)";
         setIsMini(false);
-      }, 500);
     } else {
-      setTimeout(() => {
         document.getElementById("mySidebar").style.width =
           "calc(calc(0.25 * 1rem) * 18)";
         setIsMini(true);
-      }, 500);
     }
   }
   return (
