@@ -1,0 +1,118 @@
+.home{
+    width: 100%;
+    height: 100%;
+    background-color: #0e1015;
+}
+.mainContainer{
+    width: 100%;
+    display: flex;
+    background-color: #0e1015;
+
+}
+.primarySidebar{
+    flex: 1;
+   /* background-color: white; */
+}
+.mainWrapper{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    margin-left: calc(calc(0.25 * 1rem) * 60);
+    margin-right: calc(calc(0.25 * 1rem) * 18);
+    width: 100%;
+    --scroll-color: hsla(222deg 7% 30% / 0.5)
+    /* background-color: #0F1015; */
+    background: hsla(222deg 20% 7% / 1);
+
+}
+
+.mainContent{
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.heading{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+.tabList{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.tab{
+    display: block;
+    cursor: pointer;
+    background-color: #13151b80;
+    color: grey;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.tab:hover{
+    /* color: rgb(168, 168, 168); */
+    color: #e2e4e9;
+}
+.tab.active{
+    color: black;
+    background-color:#272a30;
+}
+
+.icon{
+    margin-right: 10px;
+}
+.allGamesWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.categoryList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.categoryHeading{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    margin-bottom: 10px;
+}
+.categoryIcon{
+    margin-right: 10px;
+}
+.cardList{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+
+}
+@media screen and (max-width: 1510px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 18);
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (min-width: 1511px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 60);
+    }
+}
