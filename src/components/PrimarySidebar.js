@@ -1,17 +1,31 @@
 import React from "react";
 import classes from "./PrimarySidebar.module.css";
+import { useNavigate } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillLayersFill } from "react-icons/bs";
 import { BiBookBookmark } from "react-icons/bi";
 import { GiCrossedSwords } from "react-icons/gi";
 
 const icons = [
-  { icon: <AiFillHome className={classes.icon} />, title: "Home" },
-  { icon: <BsFillLayersFill className={classes.icon} />, title: "Overlays" },
-  { icon: <BiBookBookmark className={classes.icon} />, title: "Game Guides" },
-  { icon: <GiCrossedSwords className={classes.icon} />, title: "Arena" },
+  { icon: <AiFillHome className={classes.icon} />, title: "Home", link: "" },
+  {
+    icon: <BsFillLayersFill className={classes.icon} />,
+    title: "Overlays",
+    link: "overlays",
+  },
+  {
+    icon: <BiBookBookmark className={classes.icon} />,
+    title: "Game Guides",
+    link: "",
+  },
+  {
+    icon: <GiCrossedSwords className={classes.icon} />,
+    title: "Arena",
+    link: "",
+  },
 ];
 const PrimarySidebar = () => {
+  const navigate = useNavigate();
   return (
     <div className={classes.sidebar}>
       <div className={classes.mainWrapper}>
@@ -65,7 +79,13 @@ const PrimarySidebar = () => {
         <div className={classes.listWrapper}>
           <ul className={classes.ul}>
             {icons.map((ele) => (
-              <div className={classes.row}>
+              <div
+                className={classes.row}
+                onClick={() => {
+                  console.log("Element Link: ", ele.link);
+                  navigate(`/${ele.link}`);
+                }}
+              >
                 {ele.icon}
                 <li className={classes.title}>{ele.title}</li>
               </div>

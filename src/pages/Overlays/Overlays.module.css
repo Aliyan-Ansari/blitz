@@ -40,7 +40,11 @@
     font-weight: bold;
     display: flex;
     width: 100%;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.009em;
     justify-content: flex-start;
+    margin-bottom: 20px;
 }
 .tabList{
     width: 100%;
@@ -114,6 +118,25 @@
     grid-gap: 20px;
 
 }
+.searchInput {
+    padding-left: 36px;
+    border-radius: 5px;
+    width: 200px;
+    height: 39px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .searchDiv {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  
 @media screen and (max-width: 1510px) {
     .mainWrapper {
         margin-left: calc(calc(0.25 * 1rem) * 18);
