@@ -42,9 +42,10 @@ font-weight: bold;
   padding: 0px 4px;
   font-size: 12px;
   background-color: #272a30;
-  color: grey;
+  color: #999ca3;
   margin-right: 10px;
   border-radius: 4px;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +57,7 @@ justify-content: flex-start;
 
 }
 .description{
-font-size: 12px;
+font-size: calc(0.25 * 3em);
 font-weight: 500;
 letter-spacing: -0.009em;
 color: #7e828b;
