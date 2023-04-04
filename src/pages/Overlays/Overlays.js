@@ -25,7 +25,7 @@ const Overlays = () => {
           <path d="M20 6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2V6ZM4 6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2V6Z"></path>
         </svg>
       ),
-      title: "All Games"
+      title: "All Games",
     },
     {
       icon: (
@@ -102,16 +102,14 @@ const Overlays = () => {
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-ultimate-timers-min.webp",
           title: "Ultimate Timers",
-          description:
-            "Display teammate ultimate timers.",
+          description: "Display teammate ultimate timers.",
           chips: [{ title: ["Utility"], isNew: false }],
         },
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-trinket-min.webp",
           title: "Trinket Reminder",
-          description:
-            "Highlight Trinket when it's ready to be used.",
-          chips: [{ title: ["Tracker","Utility"], isNew: false }],
+          description: "Highlight Trinket when it's ready to be used.",
+          chips: [{ title: ["Tracker", "Utility"], isNew: false }],
         },
       ],
     },
@@ -279,7 +277,7 @@ const Overlays = () => {
                         </h3>
                         <div className={classes.cardList}>
                           {ele?.cards?.map((card, index) => {
-                            console.log('item',card.title)
+                            console.log("item", card.title);
                             return (
                               <Card
                                 key={index}

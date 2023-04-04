@@ -66,12 +66,22 @@
     color: #e2e4e9;
 }
 .tab.active{
-    color: black;
+    color: white;
     background-color:#272a30;
 }
 
 .icon{
     margin-right: 10px;
+    opacity: 0.8;
+    filter: grayscale(1);
+}
+.tab:hover + .icon {
+    opacity: 1;
+    color: #e2e4e9;
+}
+.activeIcon {
+    filter: grayscale(0);
+    opacity: 1;
 }
 .allGamesWrapper{
     width: 100%;
