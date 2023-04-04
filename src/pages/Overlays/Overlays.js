@@ -142,11 +142,67 @@ const Overlays = () => {
       title: "Teamfight Tactics",
       cards: [
         {
-          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-itemdifference-minv3.webp",
-          title: "Item Value Difference",
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-augmentinfo-sm.webp",
+          title: "Augment Info",
           description:
-            "Easily evaluate and compare the value of players item inventories.",
-          chips: [{ title: ["Tracker"], isNew: true }],
+            "View live statistics on Augments offered in the game.",
+          chips: [{ title: ["Utility"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-benchmarking-sm.webp",
+          title: "Benchmarking",
+          description:
+            "Track key performance metrics to better gauge performance in real time.",
+          chips: [{ title: ["Coaching","Tracker"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-championsOverlay.webp",
+          title: "Champion Info",
+          description:
+            "Discover the best items for any Champion and the probability of their appearance.",
+          chips: [{ title: ["Utility"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-compsOverlay.webp",
+          title: "Compositions",
+          description:
+            "View an up-to-date breakdown of the strongest unit comps and ideal items for those units.",
+          chips: [{ title: ["Utility"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-itemsOverlay.webp",
+          title: "Item Combinations",
+          description:
+            "View all the item combinations you can build to power up your units.",
+          chips: [{ title: ["Utility"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-levelingOverlay.webp",
+          title: "Leveling Info",
+          description:
+            "Monitor your XP and find out when it's a good time to level up.",
+          chips: [{ title: ["Coaching","Utility"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-matchupTrackingOverlay.webp",
+          title: "Matchup Tracking",
+          description:
+            "Keep track of opponents you've faced previously.",
+          chips: [{ title: ["Tracker"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-opponentTagsOverlay.webp",
+          title: "Opponent Tags",
+          description:
+            "Keep track of opponent compositions by adding tags to their portrait.",
+          chips: [{ title: ["Utility"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-streaminfo-sm.webp",
+          title: "Stream Info",
+          description:
+            "Share your username, rank and stats with your stream.",
+          chips: [{ title: ["Utility"], isNew: false }],
         },
       ],
     },
@@ -173,11 +229,32 @@ const Overlays = () => {
       title: "Valorant",
       cards: [
         {
-          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-itemdifference-minv3.webp",
-          title: "Item Value Difference",
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/valOverlay/benchmark-overlay-mini.webp",
+          title: "Post Match Insights",
           description:
-            "Easily evaluate and compare the value of players item inventories.",
-          chips: [{ title: ["Tracker"], isNew: true }],
+            "Automatically pop up in-depth statistics as soon as your game ends.",
+          chips: [{ title: ["Performance"], isNew: true }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/overlay-marketplace/agent-select-small.webp",
+          title: "Agent Select",
+          description:
+            "See players' ranks and statistics from their last 5 competitive matches in agent select.",
+          chips: [{ title: ["Performance"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/valOverlay/dynamic-stats-overlay-mini.webp",
+          title: "Dynamic Stats",
+          description:
+            "Track key combat metrics to better gauge performance in real time.",
+          chips: [{ title: ["Tracker"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/val-player-performance-min.webp",
+          title: "Loading Screen",
+          description:
+            "See players' ranks and statistics from last 5 matches in loading screen.",
+          chips: [{ title: ["Tracker"], isNew: false }],
         },
       ],
     },
@@ -202,6 +279,22 @@ const Overlays = () => {
         </svg>
       ),
       title: "CS:GO",
+      cards: [
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/csOverlay/combat-sm.webp",
+          title: "Dynamic Stats",
+          description:
+            "Track key combat metrics in real time and compare them to the best in the lobby.",
+          chips: [{ title: ["Tracker"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/csOverlay/post-match-sm.webp",
+          title: "Post Match Insights",
+          description:
+            "Automatically pop up in-depth statistics as soon as your game ends.",
+          chips: [{ title: ["Performance"], isNew: false }],
+        },
+      ],
     },
     {
       icon: (
@@ -226,17 +319,38 @@ const Overlays = () => {
       title: "Apex Legends",
       cards: [
         {
-          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-itemdifference-minv3.webp",
-          title: "Item Value Difference",
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/apexOverlay/dynamic-stats-overlay-mini.webp",
+          title: "Dynamic Stats",
           description:
-            "Easily evaluate and compare the value of players item inventories.",
-          chips: [{ title: ["Tracker"], isNew: true }],
+            "Track key combat metrics in real time and compare them to the best in the lobby.",
+          chips: [{ title: ["Tracker"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/apexOverlay/legend-select-sm.webp",
+          title: "Legend Select",
+          description:
+            "Compare your top legends' stats and choose the best option on legend select.",
+          chips: [{ title: ["Performance"], isNew: false }],
+        },
+        {
+          url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/apexOverlay/post-match-sm.webp",
+          title: "Post Match Insights",
+          description:
+            "Automatically pop up in-depth statistics as soon as your game ends.",
+          chips: [{ title: ["Performance"], isNew: false }],
+        },
+        {
+          url: "",
+          title: "Streamer Overlay",
+          description:
+            "Show your stats in streaming software, such as OBS Studio.",
+          chips: [{ title: ["Utility"], isNew: false }],
         },
       ],
     },
   ];
   return (
-    <div className={classes.home}>
+    <div className={classes.Overlay}>
       <div className={classes.mainContainer}>
         <div className={classes.primarySidebar}>
           <PrimarySidebar />
@@ -297,11 +411,31 @@ const Overlays = () => {
                 })}
               </div>
             ) : (
-              <>notActive</>
+              <div className={classes.allGamesWrapper}>
+              {tabList.map((ele, index) => {
+                if (index === active) {
+                  return (
+                    <div className={classes.categoryList}>
+                      <div className={classes.cardList}>
+                        {ele?.cards?.map((card, index) => {
+                          console.log('item',card.title)
+                          return (
+                            <Card
+                              key={index}
+                              url={card.url}
+                              title={card.title}
+                              chips={card.chips}
+                              description={card.description}
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                }
+              })}
+            </div>
             )}
-          </div>
-          <div className={classes.footer}>
-            <Footer />
           </div>
         </div>
         <div className={classes.secondarySidebar}>
