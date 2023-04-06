@@ -80,15 +80,14 @@ const Card = (props) => {
           <p className={classes.description}>{props.description}</p>
         </div>
       </div>
-      {/* <Modal onClose={onClose} size="full" isOpen={isOpen} styleConfig>
+      <Modal onClose={onClose} size="full" isOpen={isOpen} styleConfig>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-          </ModalBody>
+          <ModalBody></ModalBody>
         </ModalContent>
-      </Modal> */}
+      </Modal>
     </>
   );
 };

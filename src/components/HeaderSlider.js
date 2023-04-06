@@ -83,28 +83,12 @@ const HeaderSlider = () => {
               <img
                 src={value.coverImage}
                 alt="Cover Imge"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "190px",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "10px",
-                }}
+                className={classes.sliderCoverImage}
               />
               <img
                 src={value.titleImage}
                 alt="Title Imge"
-                style={{
-                  position: "absolute",
-                  bottom: "10px",
-                  width: "190px",
-                  maxHeight: "50%",
-                  objectFit: "contain",
-                  filter:
-                    "drop-shadow(0px calc(0.25 * 1rem) calc(0.25 * 2rem) hsla(222deg 33% 4% / 1)",
-                }}
+                className={classes.sliderTitleImage}
               />
             </div>
           </Tilt>

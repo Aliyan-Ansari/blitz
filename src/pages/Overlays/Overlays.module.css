@@ -56,8 +56,9 @@
 .tab{
     display: block;
     cursor: pointer;
-    background-color: #13151b80;
-    color: grey;
+    background-color: hsla(222deg 19% 9% / 0.5);
+    box-shadow: none;
+    color: hsla(222deg 5% 62% / 0.5);
     padding: 10px 20px;
     border-radius: 8px;
     margin-right: 20px;
@@ -68,7 +69,8 @@
 }
 .tab:hover{
     /* color: rgb(168, 168, 168); */
-    color: #e2e4e9;
+    color: hsla(222deg 5% 62% / 1);
+    background-color: hsla(222deg 14% 11% / 1);
 }
 .tab.active{
     color: white;
@@ -82,15 +84,17 @@
 .icon{
     margin-right: 10px;
     opacity: 0.8;
-    filter: grayscale(1);
 }
-.tab:hover + .icon {
-    opacity: 1;
-    color: #e2e4e9;
+.tab:hover .notActiveIcon > svg > path:first-child {
+    fill: hsla(222deg 5% 62% / 1);
 }
-.activeIcon {
-    filter: grayscale(0);
-    opacity: 1;
+
+.notActiveIcon > svg > path:first-child {
+    fill: hsla(222deg 5% 62% / 0.5)
+}
+
+.activeIcon > svg > path:first-child {
+    fill: auto;
 }
 .allGamesWrapper{
     width: 100%;

@@ -398,7 +398,9 @@ const Overlays = () => {
                 >
                   <span
                     className={`${classes.icon} ${
-                      index === active ? classes.activeIcon : ""
+                      index === active
+                        ? classes.activeIcon
+                        : classes.notActiveIcon
                     }`}
                   >
                     {ele.icon}
