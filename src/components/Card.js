@@ -60,7 +60,7 @@ const Card = (props) => {
           <p className={classes.title}>{props.title}</p>
         </div>
         <div className={classes.chipList}>
-          {props?.chips.map((ele) =>
+          {props?.chips?.map((ele) =>
             ele.title.map((title) => (
               <>
                 {ele.isNew && (

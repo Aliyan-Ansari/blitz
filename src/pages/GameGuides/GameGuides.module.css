@@ -1,0 +1,229 @@
+.gameGuides{
+    width: 100%;
+    height: 100vh;
+    background-color: #0e1015;
+}
+.mainContainer{
+    width: 100%;
+    display: flex;
+    background-color: #0e1015;
+}
+
+/* .cardContainer::before {
+        content: "";
+        inset: 0;
+        background: radial-gradient(
+          152.75% 153.33% at 54.4% 0%,
+          rgba(21, 24, 30, 0) 13.7%,
+          #15181e 100%
+        );
+        mix-blend-mode: multiply;
+        z-index: 222222222;
+} */
+
+.sliderCoverImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    outline: calc(0.25 * 0.5rem) solid transparent;
+    outline-offset: var(0.25 * 0.5rem);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+.primarySidebar{
+    flex: 1;
+   /* background-color: white; */
+}
+.mainWrapper{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    margin-left: calc(calc(0.25 * 1rem) * 60);
+    margin-right: calc(calc(0.25 * 1rem) * 18);
+    width: 100%;
+    --scroll-color: hsla(222deg 7% 30% / 0.5)
+    /* background-color: #0F1015; */
+    background: hsla(222deg 20% 7% / 1);
+
+}
+
+.mainContent{
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.heading{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.009em;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.tabList{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.tab{
+    display: block;
+    cursor: pointer;
+    background-color: hsla(222deg 19% 9% / 0.5);
+    box-shadow: none;
+    color: hsla(222deg 5% 62% / 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    white-space: pre;
+}
+.tab:hover{
+    /* color: rgb(168, 168, 168); */
+    color: hsla(222deg 5% 62% / 1);
+    background-color: hsla(222deg 14% 11% / 1);
+}
+.tab.active{
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: hsla(222deg 10% 17% / 1);
+    box-shadow: inset 0px 1px 0px hsla(222deg 9% 23% / 1);
+}
+
+.icon{
+    margin-right: 10px;
+    opacity: 0.8;
+}
+.tab:hover .notActiveIcon > svg > path:first-child {
+    fill: hsla(222deg 5% 62% / 1);
+}
+
+.notActiveIcon > svg > path:first-child {
+    fill: hsla(222deg 5% 62% / 0.5)
+}
+
+.activeIcon > svg > path:first-child {
+    fill: auto;
+}
+.allGamesWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.categoryList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.categoryHeading{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    margin-bottom: 15px;
+}
+.categoryIcon{
+    margin-right: 10px;
+}
+.cardList{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 15px;
+
+}
+.searchInput {
+    padding-left: 36px;
+    border-radius: 5px;
+    width: 200px;
+    height: 39px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .searchDiv {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .cardContainer {
+    width: calc(0.25 * 60rem);
+    background: hsla(222deg 14% 11% / 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: calc(0.25 * 6rem);
+    box-shadow: inset 0px 1px 0px rgb(227 229 234 / 5%);
+    text-align: left;
+    /* ------- */
+    border-radius: 8px;
+    overflow: hidden;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0px 0px 20px transparent;
+    cursor: pointer;
+  }
+
+  .cardContainer:hover {
+    background: hsla(222deg 10% 17% / 1);
+    outline-color: hsla(222deg 14% 90% / 0.25);
+  }
+
+  .cardIcon {
+    filter: invert(1);
+
+  }
+  .cardTitle {
+    display: flex;
+    align-items: center;
+    padding-top: calc(0.25 * 4rem);
+    padding-bottom: calc(0.25 * 2rem);
+    color: hsla(222deg 14% 90% / 1);
+  }
+  .cardDescription {
+    display: flex;
+    align-items: center;
+    max-width: calc(0.25 * 48rem);
+    color: hsla(222deg 5% 52% / 1);
+
+  }
+  
+@media screen and (max-width: 1510px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 18);
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (min-width: 1511px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 60);
+    }
+}
