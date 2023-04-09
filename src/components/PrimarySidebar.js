@@ -21,7 +21,7 @@ const icons = [
   {
     icon: <GiCrossedSwords className={classes.icon} />,
     title: "Arena",
-    link: "",
+    link: "arena",
   },
 ];
 const PrimarySidebar = () => {

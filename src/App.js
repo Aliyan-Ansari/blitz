@@ -1,4 +1,5 @@
 import "./App.css";
+import Arena from "./pages/Arena/Arena";
 import Home from "./pages/Home/Home";
 import Overlays from "./pages/Overlays/Overlays";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -34,6 +35,14 @@ function App() {
       element: (
         <div className="App">
           <GameGuides />
+        </div>
+      ),
+    },
+    {
+      path: "arena",
+      element: (
+        <div className="App">
+          <Arena />
         </div>
       ),
     },
