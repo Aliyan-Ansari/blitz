@@ -468,7 +468,7 @@ const Arena = () => {
                   </a>
                 </div>
                 <div className={classes.moreDetails}>
-                  <span className={classes.mroeDetailsAction}>
+                  <span className={classes.moreDetailsAction}>
                     More Details
                   </span>
                 </div>
