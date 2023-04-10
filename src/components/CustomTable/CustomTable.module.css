@@ -127,6 +127,7 @@
 .duration{
     font-weight: 500;
     font-size: calc(0.25*3.5em);
+   color: #e2e4e9;
     letter-spacing: -0.009em;
 }
 .registered{
@@ -138,4 +139,34 @@
     color:#e2e4e9;
     font-weight: 700;
     font-size: calc(0.25*3.5em); 
+}
+.bodyRow:focus-within .actionWrapper{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: calc(0.25*22rem);
+    overflow: visible;
+    clip: unset;
+    clip-path: none;
+}
+.bodyRow .actionWrapper{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    background-color: #272a30;
+    border-radius: 5px;
+}
+.actionDetails{
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    inset: 0;
+    height: 100%;
 }
