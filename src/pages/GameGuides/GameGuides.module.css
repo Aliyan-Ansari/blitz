@@ -150,7 +150,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
     grid-auto-rows: auto;
-    grid-gap: 15px;
+    grid-gap: 20px;
 
 }
 .searchInput {
@@ -173,22 +173,26 @@
   }
 
   .cardContainer {
-    width: calc(0.25 * 60rem);
+    /* width: calc(0.25 * 60rem); */
     background: hsla(222deg 14% 11% / 1);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    padding: calc(0.25 * 6rem);
+    /* padding: calc(0.25 * 6rem); */
+    box-sizing: border-box;
     box-shadow: inset 0px 1px 0px rgb(227 229 234 / 5%);
     text-align: left;
-    /* ------- */
     border-radius: 8px;
     overflow: hidden;
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: 0px 0px 20px transparent;
+    /* box-shadow: 0px 0px 20px transparent; */
     cursor: pointer;
+  }
+  .cardContainers {
+    padding: calc(0.25 * 5.5rem);
+    box-sizing: border-box;
   }
 
   .cardContainer:hover {
@@ -210,7 +214,8 @@
   .cardDescription {
     display: flex;
     align-items: center;
-    max-width: calc(0.25 * 48rem);
+    /* max-width: calc(0.25 * 48rem); */
+    font-size: calc(0.25 * 3em);
     color: hsla(222deg 5% 52% / 1);
 
   }

@@ -255,9 +255,13 @@ align-items: center;
 border-radius: 5px;
 cursor: pointer;
   }
+  .signIn:hover{
+    background: #de4a5e;
+
+  }
   .typeSubtitle1{
     font-weight: 600;
-    font-size: calc(0.25 * 4em);
+    font-size: calc(0.25 * 3.5em);
     letter-spacing: -0.009em;
   }
   .moreDetails{
