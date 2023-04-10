@@ -24,6 +24,33 @@
   z-index: 222222222;
 }
 
+.sliderCoverImage {
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  width: 190px;
+  height: 100%;
+  border-radius: 10px;
+  top: 50%;
+    left: 50%;
+    object-fit: cover;
+    outline: calc(0.25 * 0.5rem) solid transparent;
+    outline-offset: var(0.25 * 0.5rem);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+}
+
+.sliderTitleImage {
+  position: absolute;
+  bottom: 10px;
+  width: 190px;
+  max-height: 50%;
+  object-fit: contain;
+  filter: drop-shadow(0px calc(0.25 * 1rem) calc(0.25 * 2rem) hsla(222deg 33% 4% / 1));
+  z-index: 2;
+}
+
 .headerCard:hover {
   border: 3px solid #8c8e93;
 }

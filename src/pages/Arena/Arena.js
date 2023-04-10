@@ -1,16 +1,39 @@
 import React, { useState } from "react";
-import GameDetails from "../../components/GameDetails";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import HeaderSlider from "../../components/HeaderSlider";
 import PrimarySidebar from "../../components/PrimarySidebar";
 import SecondarySidebar from "../../components/SecondarySidebar";
-import DetailSection from "../../components/DetailSection";
-import classes from "./Overlays.module.css";
-import Card from "../../components/Card";
-const Overlays = () => {
-  const [active, setActive] = useState();
+import classes from "./Arena.module.css";
+import { FaSearch } from "react-icons/fa";
+import {MdWatchLater} from 'react-icons/md'
+const Arena = () => {
+  const [active, setActive] = useState(0);
+  const [isActive, setIsActive] = useState(false);
 
+  const handleFocus = () => {
+    setIsActive(true);
+  };
+
+  const handleBlur = () => {
+    setIsActive(false);
+  };
+const lolIcon =  <svg
+width="32"
+height="32"
+viewBox="0 0 20 20"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+  class="icon-box"
+  d="M0 8c0-2.8 0-4.2.545-5.27A5 5 0 0 1 2.73.545C3.8 0 5.2 0 8 0h4c2.8 0 4.2 0 5.27.545a5 5 0 0 1 2.185 2.185C20 3.8 20 5.2 20 8v4c0 2.8 0 4.2-.545 5.27a5 5 0 0 1-2.185 2.185C16.2 20 14.8 20 12 20H8c-2.8 0-4.2 0-5.27-.545A5 5 0 0 1 .545 17.27C0 16.2 0 14.8 0 12V8Z"
+  fill="#D5A038"
+></path>
+<path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M6.223 3 7 4.167v11.277L6.223 17h8.568l1.044-3h-5.796V3H6.223ZM3.39 10.389A6.6 6.6 0 0 1 6 5.126v2.97a4.59 4.59 0 0 0-.61 2.293c0 .835.222 1.618.61 2.294v2.578l-.14.281a6.599 6.599 0 0 1-2.47-5.153Zm11.222 0c0 .97-.299 1.869-.81 2.611h2.275A6.613 6.613 0 0 0 11 3.853v2.033a4.613 4.613 0 0 1 3.611 4.503Z"
+  fill="#0E1015"
+></path>
+</svg>
   const tabList = [
     {
       icon: (
@@ -142,8 +165,7 @@ const Overlays = () => {
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-augmentinfo-sm.webp",
           title: "Augment Info",
-          description:
-            "View live statistics on Augments offered in the game.",
+          description: "View live statistics on Augments offered in the game.",
           chips: [{ title: ["Utility"], isNew: false }],
         },
         {
@@ -151,7 +173,7 @@ const Overlays = () => {
           title: "Benchmarking",
           description:
             "Track key performance metrics to better gauge performance in real time.",
-          chips: [{ title: ["Coaching","Tracker"], isNew: false }],
+          chips: [{ title: ["Coaching", "Tracker"], isNew: false }],
         },
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-championsOverlay.webp",
@@ -179,13 +201,12 @@ const Overlays = () => {
           title: "Leveling Info",
           description:
             "Monitor your XP and find out when it's a good time to level up.",
-          chips: [{ title: ["Coaching","Utility"], isNew: false }],
+          chips: [{ title: ["Coaching", "Utility"], isNew: false }],
         },
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-matchupTrackingOverlay.webp",
           title: "Matchup Tracking",
-          description:
-            "Keep track of opponents you've faced previously.",
+          description: "Keep track of opponents you've faced previously.",
           chips: [{ title: ["Tracker"], isNew: false }],
         },
         {
@@ -198,8 +219,7 @@ const Overlays = () => {
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-streaminfo-sm.webp",
           title: "Stream Info",
-          description:
-            "Share your username, rank and stats with your stream.",
+          description: "Share your username, rank and stats with your stream.",
           chips: [{ title: ["Utility"], isNew: false }],
         },
       ],
@@ -347,17 +367,38 @@ const Overlays = () => {
       ],
     },
   ];
-  
   return (
-    <div className={classes.Overlay}>
+    <div className={classes.Arena}>
       <div className={classes.mainContainer}>
         <div className={classes.primarySidebar}>
           <PrimarySidebar />
         </div>
         <div className={classes.mainWrapper}>
-          {/* <Header /> */}
-          <div className={classes.mainContent}>
-            <h1 className={classes.heading}>Overlays</h1>
+          <div className={classes.headerContainer}>
+            <div className={classes.searchDiv}>
+              <FaSearch
+                style={{
+                  position: "absolute",
+                  top: 22,
+                  left: 30,
+                  fontSize: 16,
+                  color: "#7e828b",
+                }}
+              />
+              <input
+                type="text"
+                style={{
+                  backgroundColor: "hsl(222, 10%, 17%)",
+                  color: "hsla(222deg, 5%, 62%)",
+                }}
+                className={classes.searchInput}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                disabled
+                placeholder="Search"
+              />
+            </div>
+            <h1 className={classes.heading}>Arena</h1>
             <div className={classes.tabList}>
               {tabList.map((ele, index) => (
                 <span
@@ -380,63 +421,85 @@ const Overlays = () => {
                 </span>
               ))}
             </div>
-            {active === 0 ? (
-              <div className={classes.allGamesWrapper}>
-                {tabList.map((ele, index) => {
-                  if (index > 0) {
-                    return (
-                      <div className={classes.categoryList}>
-                        <h3 className={classes.categoryHeading}>
-                          <span className={classes.categoryIcon}>
-                            {ele.icon}
-                          </span>
-                          {ele.title}
-                        </h3>
-                        <div className={classes.cardList}>
-                          {ele?.cards?.map((card, index) => {
-                            console.log("item", card.title);
-                            return (
-                              <Card
-                                key={index}
-                                url={card.url}
-                                title={card.title}
-                                chips={card.chips}
-                                description={card.description}
-                              />
-                            );
-                          })}
+          </div>
+          <div className={classes.mainContent}>
+                    <div className={classes.eventWrapper}>
+                        <div className={classes.imageWrapper}>
+                            <img src="https://blitz-cms-iesdev.blitz.gg/challenge_assets/1137258e-dd2c-4bd6-9e4b-0d2d687f3ff5.png" alt="event-background-image" className={classes.image}/>
+                            <div className={classes.detailWrapper}>
+                                <h2 className={classes.eventTitle}>ARAM Cup 6</h2>
+                                <span className={classes.eventDeadline}><MdWatchLater style={{ fontSize: '22px' , marginRight:'10px'}}/>Ends in: 08h 32m</span>
+                            </div>
                         </div>
+                        <div className={classes.eventDetails}>
+                            <div className={classes.logo}>{lolIcon}</div>
+                            <div className={classes.live}>
+                                <span className={classes.red}>Live</span>
+                                <span className={classes.typeCaption}>Apr 7, 12 PM - Apr 8, 12 PM</span>
+                            </div>
+                            <div className={classes.registered}>
+                            <span className={classes.typeSubtitle}>2.3k</span>
+                            <span className={classes.typeCaption}>Registered</span>
+                            </div>
+                            <div className={classes.prizePool}>
+                                
+                            <span className={classes.typeSubtitle}>$50</span>
+                            <span className={classes.typeCaption}>Prize Pool</span>
+
+                            </div>
+                            <div className={classes.break}></div>
+                            <div className={classes.action}>
+                                <a className={classes.signIn} type="button">
+                                    <span className={classes.typeSubtitle1}>Sign in to join!</span>
+                                </a>
+                            </div>
+                            <div className={classes.moreDetails}>
+                              <span className={classes.mroeDetailsAction}>More Details</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={classes.table}>
+
+                    </div>
+                    <div className={classes.cardContent}>
+                    <div className={classes.headerSection}>
+                      <h4 className={classes.typeSubtitle2}>How does Blitz Arena work?</h4>
+                      <span className={classes.typeCaption1}>You don't have to be a professional gamer to join esports tournaments!</span>
+                    </div>
+                    <div className={classes.card}>
+                      <div className={classes.imageContainer}>
+                        <img src="https://blitz-cdn.blitz.gg/blitz/ui/img/arena/discover-help-register.webp" alt="registerImage" className={classes.cardImage}/>
                       </div>
-                    );
-                  }
-                })}
-              </div>
-            ) : (
-              <div className={classes.allGamesWrapper}>
-              {tabList.map((ele, index) => {
-                if (index === active) {
-                  return (
-                    <div className={classes.categoryList}>
-                      <div className={classes.cardList}>
-                        {ele?.cards?.map((card, index) => {
-                          console.log('item',card.title)
-                          return (
-                            <Card
-                              key={index}
-                              url={card.url}
-                              title={card.title}
-                              chips={card.chips}
-                              description={card.description}
-                            />
-                          );
-                        })}
+                      <div className={classes.textContainer}>
+                        <h6 className={classes.typeH6}>1. Register!</h6>
+                        <p className={classes.typeBody}>Sign up above and practice while you wait.</p>
                       </div>
                     </div>
-                  );
-                }
-              })}
-            </div>
-            )}
+                    <div className={classes.card}>
+                      <div className={classes.imageContainer}>
+                        <img src="https://blitz-cdn.blitz.gg/blitz/ui/img/arena/discover-help-play.webp" alt="discoverImage" className={classes.cardImage}/>
+                      </div>
+                      <div className={classes.textContainer}>
+                        <h6 className={classes.typeH6}>2. Play games!</h6>
+                        <p className={classes.typeBody}>Complete mission objectives to score points and climb the leaderboard.</p>
+                      </div>
+                    </div>
+                    <div className={classes.card}>
+                      <div className={classes.imageContainer}>
+                        <img src="https://blitz-cdn.blitz.gg/blitz/ui/img/arena/discover-help-win.webp" alt="diamondImage" className={classes.cardImage}/>
+                      </div>
+                      <div className={classes.textContainer}>
+                        <h6 className={classes.typeH6}>3. Win prizes!</h6>
+                        <p className={classes.typeBody}>Win everything from cash to gaming PCs and gift cards!</p>
+                      </div>
+                    </div>
+                    <div className={classes.fullCard}>
+                      <h4 className={classes.typeSubtitle3}>Join events to climb and shine!</h4>
+                      <p className={classes.typeBody3}>Blitz Arena events happen on a regular basis. Check back often to join fun events with exciting partners, challenging missions, and great prizes!</p>
+                      <p></p>
+                    </div>
+
+                    </div>
           </div>
         </div>
         <div className={classes.secondarySidebar}>
@@ -447,4 +510,4 @@ const Overlays = () => {
   );
 };
 
-export default Overlays;
+export default Arena;

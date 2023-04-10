@@ -16,12 +16,12 @@ const icons = [
   {
     icon: <BiBookBookmark className={classes.icon} />,
     title: "Game Guides",
-    link: "",
+    link: "game-guides",
   },
   {
     icon: <GiCrossedSwords className={classes.icon} />,
     title: "Arena",
-    link: "",
+    link: "arena",
   },
 ];
 const PrimarySidebar = () => {
