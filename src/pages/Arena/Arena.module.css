@@ -205,6 +205,9 @@
     border-bottom-left-radius: 12px;
 
   }
+  .table{
+    width: 100%;
+  }
   .live{
 flex: 1;
 font-weight: 700;
