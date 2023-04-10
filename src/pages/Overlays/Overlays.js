@@ -8,19 +8,8 @@ import SecondarySidebar from "../../components/SecondarySidebar";
 import DetailSection from "../../components/DetailSection";
 import classes from "./Overlays.module.css";
 import Card from "../../components/Card";
-import { FaSearch } from "react-icons/fa";
-
 const Overlays = () => {
-  const [active, setActive] = useState(0);
-  const [isActive, setIsActive] = useState(false);
-
-  const handleFocus = () => {
-    setIsActive(true);
-  };
-
-  const handleBlur = () => {
-    setIsActive(false);
-  };
+  const [active, setActive] = useState();
 
   const tabList = [
     {
@@ -153,7 +142,8 @@ const Overlays = () => {
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-augmentinfo-sm.webp",
           title: "Augment Info",
-          description: "View live statistics on Augments offered in the game.",
+          description:
+            "View live statistics on Augments offered in the game.",
           chips: [{ title: ["Utility"], isNew: false }],
         },
         {
@@ -161,7 +151,7 @@ const Overlays = () => {
           title: "Benchmarking",
           description:
             "Track key performance metrics to better gauge performance in real time.",
-          chips: [{ title: ["Coaching", "Tracker"], isNew: false }],
+          chips: [{ title: ["Coaching","Tracker"], isNew: false }],
         },
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-championsOverlay.webp",
@@ -189,12 +179,13 @@ const Overlays = () => {
           title: "Leveling Info",
           description:
             "Monitor your XP and find out when it's a good time to level up.",
-          chips: [{ title: ["Coaching", "Utility"], isNew: false }],
+          chips: [{ title: ["Coaching","Utility"], isNew: false }],
         },
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-matchupTrackingOverlay.webp",
           title: "Matchup Tracking",
-          description: "Keep track of opponents you've faced previously.",
+          description:
+            "Keep track of opponents you've faced previously.",
           chips: [{ title: ["Tracker"], isNew: false }],
         },
         {
@@ -207,7 +198,8 @@ const Overlays = () => {
         {
           url: "https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-streaminfo-sm.webp",
           title: "Stream Info",
-          description: "Share your username, rank and stats with your stream.",
+          description:
+            "Share your username, rank and stats with your stream.",
           chips: [{ title: ["Utility"], isNew: false }],
         },
       ],
@@ -355,6 +347,7 @@ const Overlays = () => {
       ],
     },
   ];
+  
   return (
     <div className={classes.Overlay}>
       <div className={classes.mainContainer}>
@@ -362,30 +355,8 @@ const Overlays = () => {
           <PrimarySidebar />
         </div>
         <div className={classes.mainWrapper}>
+          {/* <Header /> */}
           <div className={classes.mainContent}>
-            <div className={classes.searchDiv}>
-              <FaSearch
-                style={{
-                  position: "absolute",
-                  top: 22,
-                  left: 30,
-                  fontSize: 16,
-                  color: "#7e828b",
-                }}
-              />
-              <input
-                type="text"
-                style={{
-                  backgroundColor: "hsl(222, 10%, 17%)",
-                  color: "hsla(222deg, 5%, 62%)",
-                }}
-                className={classes.searchInput}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                disabled
-                placeholder="Search"
-              />
-            </div>
             <h1 className={classes.heading}>Overlays</h1>
             <div className={classes.tabList}>
               {tabList.map((ele, index) => (
@@ -440,29 +411,29 @@ const Overlays = () => {
               </div>
             ) : (
               <div className={classes.allGamesWrapper}>
-                {tabList.map((ele, index) => {
-                  if (index === active) {
-                    return (
-                      <div className={classes.categoryList}>
-                        <div className={classes.cardList}>
-                          {ele?.cards?.map((card, index) => {
-                            console.log("item", card.title);
-                            return (
-                              <Card
-                                key={index}
-                                url={card.url}
-                                title={card.title}
-                                chips={card.chips}
-                                description={card.description}
-                              />
-                            );
-                          })}
-                        </div>
+              {tabList.map((ele, index) => {
+                if (index === active) {
+                  return (
+                    <div className={classes.categoryList}>
+                      <div className={classes.cardList}>
+                        {ele?.cards?.map((card, index) => {
+                          console.log('item',card.title)
+                          return (
+                            <Card
+                              key={index}
+                              url={card.url}
+                              title={card.title}
+                              chips={card.chips}
+                              description={card.description}
+                            />
+                          );
+                        })}
                       </div>
-                    );
-                  }
-                })}
-              </div>
+                    </div>
+                  );
+                }
+              })}
+            </div>
             )}
           </div>
         </div>
