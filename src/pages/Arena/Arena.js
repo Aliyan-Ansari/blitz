@@ -480,7 +480,7 @@ const Arena = () => {
             <div className={classes.cardContent}>
               <div className={classes.headerSection}>
                 <h4 className={classes.typeSubtitle2}>
-                  How does Blitz Arena work?
+                  How does Portol.io Arena work?
                 </h4>
                 <span className={classes.typeCaption1}>
                   You don't have to be a professional gamer to join esports

@@ -58,6 +58,9 @@ xmlns="http://www.w3.org/2000/svg"
                                 <td className={classes.duration}>{row.duration}</td>
                                 <td className={classes.registered}>{row.registered}</td>
                                 <td className={classes.price}>{row.price}</td>
+                                <td className={classes.actionWrapper}>
+                                    <a type='button' className={classes.actionDetails}><span>Details</span></a>
+                                </td>
                             </tr>
   
                         ))
