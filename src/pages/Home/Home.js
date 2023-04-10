@@ -1,14 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { FaUserCircle } from "react-icons/fa";
-import GameDetails from "../../components/GameDetails";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import HeaderSlider from "../../components/HeaderSlider";
-import PrimarySidebar from "../../components/PrimarySidebar";
-import SecondarySidebar from "../../components/SecondarySidebar";
-import classes from "./Home.module.css";
-import DetailSection from "../../components/DetailSection";
+import React, { useEffect, useRef, useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { FaUserCircle } from 'react-icons/fa';
+import GameDetails from '../../components/GameDetails';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import HeaderSlider from '../../components/HeaderSlider';
+import PrimarySidebar from '../../components/PrimarySidebar';
+import SecondarySidebar from '../../components/SecondarySidebar';
+import classes from './Home.module.css';
+import DetailSection from '../../components/DetailSection';
+import MobileFooter from '../../components/MobileFooter';
 const Home = () => {
   const primaryRef = useRef(null);
   const secondaryRef = useRef(null);
@@ -28,9 +29,9 @@ const Home = () => {
       });
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
@@ -40,10 +41,10 @@ const Home = () => {
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [primaryRef]);
 
@@ -57,10 +58,10 @@ const Home = () => {
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [secondaryRef]);
 
@@ -83,7 +84,7 @@ const Home = () => {
             <div className={classes.mobileIcons}>
               <GiHamburgerMenu
                 size={28}
-                color="gray"
+                color='gray'
                 onClick={() => {
                   setIsPrimarySidebarActive(!isPrimarySideBarActive);
                 }}
@@ -93,7 +94,7 @@ const Home = () => {
             <div className={classes.mobileIcons}>
               <FaUserCircle
                 size={28}
-                color="#BBBCC2"
+                color='#BBBCC2'
                 onClick={() => {
                   setIsSecondarySidebarActive(!isSecondarySideBarActive);
                 }}
@@ -106,7 +107,7 @@ const Home = () => {
             <DetailSection />
           </div>
           <div className={classes.footer}>
-            <Footer />
+            {screenSize.width < 768 ? <MobileFooter /> : <Footer />}
           </div>
         </div>
         <div className={classes.secondarySidebar}>

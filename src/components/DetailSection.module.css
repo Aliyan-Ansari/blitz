@@ -21,11 +21,14 @@
   font-size: 30px;
   font-weight: bold;
   color: white;
+  padding-bottom: 20px;
 }
 .info {
   font-weight: bold;
   font-size: 16px;
+  line-height: 1.8;
   color: #999ca3;
+  padding-bottom: 40px;
 }
 .actions {
   display: flex;
@@ -63,4 +66,22 @@
 .signup:hover {
   opacity: 1;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    height: 450px;
+    padding: 20px 5px;
+  }
+  .mainContent {
+    width: 100%;
+  }
+  .heading {
+  font-size: 25px;
+  padding-bottom: 20px;
+  }
+  .info {
+    line-height: 1.8;
+    padding-bottom: 20px;
+  }
 }
