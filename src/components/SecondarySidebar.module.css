@@ -83,6 +83,7 @@ color:#e2e4e9;
 
 @media screen and (max-width: 520px) {
     .sidebar {
-        width: calc(calc(0.25 * 1rem) * 60);
+        width: calc(calc(0.25 * 1rem) * 18);
+        /* display: none; */
     }
 }

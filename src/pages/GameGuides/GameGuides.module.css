@@ -232,3 +232,12 @@
         margin-left: calc(calc(0.25 * 1rem) * 60);
     }
 }
+
+@media screen and (max-width: 520px) {
+    .secondarySidebar {
+        display: none;
+    }
+    .mainWrapper {
+        margin-right: 0;
+    }
+}

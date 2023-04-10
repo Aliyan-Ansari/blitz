@@ -108,3 +108,13 @@
     font-size: calc(0.25 * 3em);
     cursor: pointer;
 }
+
+@media screen and (max-width: 760px) {
+    .primarySidebar {
+        display: none;
+    }
+    .accountContainer {
+        padding: 20px;
+    }
+  }
+  
