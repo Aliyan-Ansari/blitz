@@ -6,9 +6,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 .accountContent {
-    width: 500px;
+    width: 375px;
+}
+
+.primarySidebar{
+    flex: 1;
+}
+
+.accountVideos {
+    /* width: 500px; */
+    /* height: 400px; */
+    /* position: relative; */
+}
+
+.accountVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 100%;
+    margin: 0 auto;
 }
 
 .accountHeading {
@@ -27,6 +49,9 @@
 
 .accountInputBox {
     margin-bottom: calc(0.25 * 4rem);
+    background-color: hsla(222deg 14% 11% / 1);
+    border: 1px solid hsla(222deg 10% 17% / 1);
+    border-radius: 5px;
 }
 
 .accountInput {
@@ -38,4 +63,48 @@
     background-color: hsla(222deg 14% 11% / 1);
     border: 1px solid hsla(222deg 10% 17% / 1);
     border-radius: 5px;
+}
+
+.accountButtonBox {
+    margin-bottom: calc(0.25 * 10rem);
+}
+
+.accountButton {
+    background: hsla(352deg 71% 54% / 1);
+    color: #ffffff;
+    box-shadow: inset 0 1px hsla(222deg 6% 30% / 0.15);
+    width: 100%;
+    height: 48px;
+}
+.accountButton:hover{
+    background:#de4a5e ;
+
+}
+
+.accountSubTextBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accountSubText {
+    color: hsla(222deg 6% 30% / 1);
+    font-weight: 500;
+    font-size: calc(0.25 * 3em);
+}
+
+.accountRegister {
+    margin-left: 8px;
+    color: hsla(222deg 5% 62% / 1);
+    font-weight: 700;
+    font-size: calc(0.25 * 4em);
+    cursor: pointer;
+}
+
+.accountGuestAccount {
+    margin-left: 8px;
+    color: hsla(222deg 5% 62% / 1);
+    font-weight: 700;
+    font-size: calc(0.25 * 3em);
+    cursor: pointer;
 }
