@@ -4,6 +4,7 @@ import SecondarySidebar from "../../components/SecondarySidebar";
 import classes from "./Arena.module.css";
 import { FaSearch } from "react-icons/fa";
 import {MdWatchLater} from 'react-icons/md'
+import { ArenaTable } from "../../components/CustomTable/CustomTable";
 const Arena = () => {
   const [active, setActive] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -459,7 +460,7 @@ xmlns="http://www.w3.org/2000/svg"
                         </div>
                     </div>
                     <div className={classes.table}>
-
+                      <ArenaTable/>
                     </div>
                     <div className={classes.cardContent}>
                     <div className={classes.headerSection}>
