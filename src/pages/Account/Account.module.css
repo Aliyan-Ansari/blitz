@@ -1,0 +1,41 @@
+.accountContainer {
+    background-color: #0E1015;
+    height: 100vh;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.accountContent {
+    width: 500px;
+}
+
+.accountHeading {
+    color: hsla(222deg 14% 90% / 1);
+    margin-bottom: calc(0.25 * 3rem);
+    font-weight: 700;
+    font-size: calc(0.25 * 6em);
+}
+
+.accountEmailText {
+    margin-bottom: calc(0.25 * 6rem);
+    color: hsla(222deg 5% 52% / 1);
+    font-weight: 500;
+    font-size: calc(0.25 * 3.5em);
+}
+
+.accountInputBox {
+    margin-bottom: calc(0.25 * 4rem);
+}
+
+.accountInput {
+    height: calc(0.25 * 12rem);
+    padding: calc(0.25 * 3rem);
+    color: hsla(222deg 14% 90% / 1);
+    font-weight: 400;
+    font-size: calc(0.25 * 3.5rem);
+    background-color: hsla(222deg 14% 11% / 1);
+    border: 1px solid hsla(222deg 10% 17% / 1);
+    border-radius: 5px;
+}

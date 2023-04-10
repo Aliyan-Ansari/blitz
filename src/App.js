@@ -1,48 +1,57 @@
-import "./App.css";
-import Arena from "./pages/Arena/Arena";
-import Home from "./pages/Home/Home";
-import Overlays from "./pages/Overlays/Overlays";
-import { ChakraProvider } from "@chakra-ui/react";
-import { createRoot } from "react-dom/client";
+import './App.css';
+import Arena from './pages/Arena/Arena';
+import Home from './pages/Home/Home';
+import Overlays from './pages/Overlays/Overlays';
+import { ChakraProvider } from '@chakra-ui/react';
+import { createRoot } from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
   Link,
-} from "react-router-dom";
-import GameGuides from "./pages/GameGuides/GameGuides";
+} from 'react-router-dom';
+import GameGuides from './pages/GameGuides/GameGuides';
+import Account from './pages/Account/Account';
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: '/',
       element: (
-        <div className="App">
+        <div className='App'>
           <Home />
         </div>
       ),
     },
     {
-      path: "overlays",
+      path: 'overlays',
       element: (
-        <div className="App">
+        <div className='App'>
           <Overlays />
         </div>
       ),
     },
     {
-      path: "game-guides",
+      path: 'game-guides',
       element: (
-        <div className="App">
+        <div className='App'>
           <GameGuides />
         </div>
       ),
     },
     {
-      path: "arena",
+      path: 'arena',
       element: (
-        <div className="App">
+        <div className='App'>
           <Arena />
+        </div>
+      ),
+    },
+    {
+      path: 'account',
+      element: (
+        <div className='App'>
+          <Account />
         </div>
       ),
     },
@@ -50,9 +59,6 @@ function App() {
   return (
     <ChakraProvider>
       <RouterProvider router={router} />
-      {/* <div className="App">
-      <Overlays />
-    </div> */}
     </ChakraProvider>
   );
 }
