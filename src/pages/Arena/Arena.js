@@ -76,68 +76,6 @@ const Arena = () => {
         </svg>
       ),
       title: 'League of Legends',
-      cards: [
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-itemdifference-minv3.webp',
-          title: 'Item Value Difference',
-          description:
-            'Easily evaluate and compare the value of players item inventories.',
-          chips: [{ title: ['Tracker'], isNew: true }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-benchmarking-min.webp',
-          title: 'Benchmarking',
-          description:
-            'Track key performance metrics to better gauge performance in real time.',
-          chips: [{ title: ['Performance'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-aram-health-timers-min.webp',
-          title: 'ARAM Health Timers',
-          description: 'Track health relic respawn times in the Howling Abyss.',
-          chips: [{ title: ['Tracker'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-jungle-pathing-min.webp',
-          title: 'Jungle Pathing',
-          description:
-            'Take the most effective jungle camps clearing route to dominate the game.',
-          chips: [{ title: ['Tracker'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-jungle-timers-min.webp',
-          title: 'Jungle Timers',
-          description:
-            'Track jungle respawn times when there is vision on a jungle kill.',
-          chips: [{ title: ['Tracker'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/overlay-marketplace/lol-loading-screen-small.webp',
-          title: 'Loading Screen',
-          description:
-            'Get key insights into allies, enemies, champion matchups and more.',
-          chips: [{ title: ['Tracker'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-recommended-skill-order-min.webp',
-          title: 'Recommended Skill Order',
-          description:
-            'Show which skill to level up in game based on your selected Blitz build.',
-          chips: [{ title: ['Utility'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-ultimate-timers-min.webp',
-          title: 'Ultimate Timers',
-          description: 'Display teammate ultimate timers.',
-          chips: [{ title: ['Utility'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-trinket-min.webp',
-          title: 'Trinket Reminder',
-          description: "Highlight Trinket when it's ready to be used.",
-          chips: [{ title: ['Tracker', 'Utility'], isNew: false }],
-        },
-      ],
     },
     {
       icon: (
@@ -164,68 +102,7 @@ const Arena = () => {
         </svg>
       ),
       title: 'Teamfight Tactics',
-      cards: [
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-augmentinfo-sm.webp',
-          title: 'Augment Info',
-          description: 'View live statistics on Augments offered in the game.',
-          chips: [{ title: ['Utility'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-benchmarking-sm.webp',
-          title: 'Benchmarking',
-          description:
-            'Track key performance metrics to better gauge performance in real time.',
-          chips: [{ title: ['Coaching', 'Tracker'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-championsOverlay.webp',
-          title: 'Champion Info',
-          description:
-            'Discover the best items for any Champion and the probability of their appearance.',
-          chips: [{ title: ['Utility'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-compsOverlay.webp',
-          title: 'Compositions',
-          description:
-            'View an up-to-date breakdown of the strongest unit comps and ideal items for those units.',
-          chips: [{ title: ['Utility'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-itemsOverlay.webp',
-          title: 'Item Combinations',
-          description:
-            'View all the item combinations you can build to power up your units.',
-          chips: [{ title: ['Utility'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-levelingOverlay.webp',
-          title: 'Leveling Info',
-          description:
-            "Monitor your XP and find out when it's a good time to level up.",
-          chips: [{ title: ['Coaching', 'Utility'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-matchupTrackingOverlay.webp',
-          title: 'Matchup Tracking',
-          description: "Keep track of opponents you've faced previously.",
-          chips: [{ title: ['Tracker'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-opponentTagsOverlay.webp',
-          title: 'Opponent Tags',
-          description:
-            'Keep track of opponent compositions by adding tags to their portrait.',
-          chips: [{ title: ['Utility'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-streaminfo-sm.webp',
-          title: 'Stream Info',
-          description: 'Share your username, rank and stats with your stream.',
-          chips: [{ title: ['Utility'], isNew: false }],
-        },
-      ],
+      imageUrl:'https://blitz-cdn.blitz.gg/blitz/ui/img/arena/empty-state-tft.webp',
     },
     {
       icon: (
@@ -248,36 +125,7 @@ const Arena = () => {
         </svg>
       ),
       title: 'Valorant',
-      cards: [
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/valOverlay/benchmark-overlay-mini.webp',
-          title: 'Post Match Insights',
-          description:
-            'Automatically pop up in-depth statistics as soon as your game ends.',
-          chips: [{ title: ['Performance'], isNew: true }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/overlay-marketplace/agent-select-small.webp',
-          title: 'Agent Select',
-          description:
-            "See players' ranks and statistics from their last 5 competitive matches in agent select.",
-          chips: [{ title: ['Performance'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/valOverlay/dynamic-stats-overlay-mini.webp',
-          title: 'Dynamic Stats',
-          description:
-            'Track key combat metrics to better gauge performance in real time.',
-          chips: [{ title: ['Tracker'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/val-player-performance-min.webp',
-          title: 'Loading Screen',
-          description:
-            "See players' ranks and statistics from last 5 matches in loading screen.",
-          chips: [{ title: ['Tracker'], isNew: false }],
-        },
-      ],
+      imageUrl:'https://blitz-cdn.blitz.gg/blitz/ui/img/arena/empty-state-val.webp'
     },
     {
       icon: (
@@ -300,22 +148,7 @@ const Arena = () => {
         </svg>
       ),
       title: 'CS:GO',
-      cards: [
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/csOverlay/combat-sm.webp',
-          title: 'Dynamic Stats',
-          description:
-            'Track key combat metrics in real time and compare them to the best in the lobby.',
-          chips: [{ title: ['Tracker'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/csOverlay/post-match-sm.webp',
-          title: 'Post Match Insights',
-          description:
-            'Automatically pop up in-depth statistics as soon as your game ends.',
-          chips: [{ title: ['Performance'], isNew: false }],
-        },
-      ],
+      imageUrl:'https://blitz-cdn.blitz.gg/blitz/ui/img/arena/empty-state-lol.webp'
     },
     {
       icon: (
@@ -338,36 +171,7 @@ const Arena = () => {
         </svg>
       ),
       title: 'Apex Legends',
-      cards: [
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/apexOverlay/dynamic-stats-overlay-mini.webp',
-          title: 'Dynamic Stats',
-          description:
-            'Track key combat metrics in real time and compare them to the best in the lobby.',
-          chips: [{ title: ['Tracker'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/apexOverlay/legend-select-sm.webp',
-          title: 'Legend Select',
-          description:
-            "Compare your top legends' stats and choose the best option on legend select.",
-          chips: [{ title: ['Performance'], isNew: false }],
-        },
-        {
-          url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/apexOverlay/post-match-sm.webp',
-          title: 'Post Match Insights',
-          description:
-            'Automatically pop up in-depth statistics as soon as your game ends.',
-          chips: [{ title: ['Performance'], isNew: false }],
-        },
-        {
-          url: '',
-          title: 'Streamer Overlay',
-          description:
-            'Show your stats in streaming software, such as OBS Studio.',
-          chips: [{ title: ['Utility'], isNew: false }],
-        },
-      ],
+      imageUrl:'https://blitz-cdn.blitz.gg/blitz/ui/img/arena/empty-state-apex.webp'
     },
   ];
   return (
@@ -426,6 +230,27 @@ const Arena = () => {
             </div>
           </div>
           <div className={classes.mainContent}>
+            {active > 1 &&
+            (
+              tabList.map((list, index)=>{
+                if(active===index){
+                return (
+            <div className={classes.eventTitleImageWrapper} key={index}>
+              <div className={classes.eventTitleCard}>
+                <h3 className={classes.typeH3}>Working on bringing you {list.title === 'CS:GO' ? 'more': list?.title} events!</h3>
+                <p className={classes.typeBody}>While we are tinkering, check out the other events available below.</p>
+              </div>
+              <div className={classes.charImage} style={{ backgroundImage: `url(${list?.imageUrl})`}}></div>
+            </div>
+
+                )
+                }
+              }
+              )
+            ) 
+            }
+            {
+              active < 2 && (
             <div className={classes.eventWrapper}>
               <div className={classes.imageWrapper}>
                 <img
@@ -474,6 +299,8 @@ const Arena = () => {
                 </div>
               </div>
             </div>
+              )
+            }
             <div className={classes.table}>
               <ArenaTable />
             </div>

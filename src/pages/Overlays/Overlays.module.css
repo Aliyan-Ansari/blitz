@@ -66,6 +66,8 @@
     font-weight: 600;
     display: flex;
     align-items: center;
+    white-space: pre;
+
 }
 .tab:hover{
     /* color: rgb(168, 168, 168); */
