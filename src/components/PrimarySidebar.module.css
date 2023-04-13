@@ -24,10 +24,13 @@
 
 }
 .logoIcon{
-margin-right: 27px;
+    width: 35px;
+    height: 35px;
+    display: flex;
 }
 .logo{
-    font-size: 22px;
+    margin-left: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: white;
     letter-spacing: 0.1cm;
