@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Tilt } from "react-tilt";
-import classes from "./HeaderSlider.module.css";
+import React, { useState } from 'react';
+import { Tilt } from 'react-tilt';
+import classes from './HeaderSlider.module.css';
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -11,91 +11,71 @@ const defaultOptions = {
   transition: true, // Set a transition on enter/exit.
   axis: null, // What axis should be disabled. Can be X or Y.
   reset: true, // If the tilt effect has to be reset on exit.
-  easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+  easing: 'cubic-bezier(.03,.98,.52,.99)', // Easing on enter/exit.
 };
 
 const HeaderSlider = () => {
   const [games, setGames] = useState([
     {
-      title: "League of Legends",
+      title: 'League of Legends',
       coverImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-lol.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-lol.webp',
       titleImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-lol.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-lol.webp',
+      class: 'horizontal',
     },
     {
-      title: "Teamfight Tactics",
+      title: 'Teamfight Tactics',
       coverImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-tft-10fbbb.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-tft-10fbbb.webp',
       titleImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-tft.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-tft.webp',
+      class: 'vertical',
     },
     {
-      title: "Valorant",
+      title: 'Valorant',
       coverImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-val.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-val.webp',
       titleImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-val.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-val.webp',
+      class: 'big',
     },
     {
-      title: "CS:GO",
+      title: 'CS:GO',
       coverImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-csgo.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-csgo.webp',
       titleImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-csgo.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-csgo.webp',
+      class: 'vertical',
     },
     {
-      title: "Apex Legends",
+      title: 'Apex Legends',
       coverImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-apex.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/bg-apex.webp',
       titleImage:
-        "https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-apex.webp",
+        'https://blitz-cdn.blitz.gg/blitz/ui/img/gamecover/name-apex.webp',
+      class: 'horizontal',
     },
   ]);
 
   return (
     <div className={classes.headerSlider}>
       {games.map((value) => (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            marginRight: 6,
-            marginLeft: 6,
-            cursor: "pointer",
-          }}
+        <Tilt
+          options={defaultOptions}
+          className={`${classes.headerCard} ${classes[value.class]}`}
         >
-          <Tilt
-            options={defaultOptions}
-            style={{ height: "240px", width: "190px" }}
-          >
-            <div
-              style={{
-                width: "190px",
-                height: "230px",
-                marginTop: "5px",
-                position: "relative",
-                display: "flex",
-                borderRadius: "13px",
-              }}
-              className={classes.headerCard}
-            >
-              <img
-                src={value.coverImage}
-                alt="Cover Imge"
-                className={classes.sliderCoverImage}
-              />
-              <img
-                src={value.titleImage}
-                alt="Title Imge"
-                className={classes.sliderTitleImage}
-              />
-            </div>
-          </Tilt>
-          <h4 style={{ textAlign: "left", margin: "10px 0", color: "#E2E4E9" }}>
-            {value.title}
-          </h4>
-        </div>
+          <img
+            src={value.coverImage}
+            alt='Cover Imge'
+            className={classes.sliderCoverImage}
+          />
+          <img
+            src={value.titleImage}
+            alt='Title Imge'
+            className={classes.sliderTitleImage}
+          />
+        </Tilt>
       ))}
     </div>
   );
