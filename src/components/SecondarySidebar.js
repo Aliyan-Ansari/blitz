@@ -36,11 +36,6 @@ const icons = [
   },
   {
     link: '',
-    icon: <FaWallet className={classes.icon} />,
-    title: 'Wallet',
-  },
-  {
-    link: '',
     icon: <BsPersonPlusFill className={classes.icon} />,
     title: 'Coming Soon',
   },

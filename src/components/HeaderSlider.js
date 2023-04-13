@@ -60,14 +60,15 @@ const HeaderSlider = () => {
 
   return (
     <div className={classes.headerSlider}>
-      {games.map((value) => (
+      {games.map((value, index) => (
         <Tilt
+          key={index}
           options={defaultOptions}
           className={` ${classes.headerCard} ${classes[value.class]}`}
         >
           <img
             src={value.coverImage}
-            alt='Cover Imge'
+            alt='Cover Image'
             className={classes.sliderCoverImage}
           />
           <img
