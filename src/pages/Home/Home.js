@@ -103,7 +103,7 @@ const Home = () => {
           </div>
           <div className={classes.mainContent}>
             <HeaderSlider />
-            <GameDetails />
+            {/* <GameDetails /> */}
             <DetailSection />
           </div>
           <div className={classes.footer}>
