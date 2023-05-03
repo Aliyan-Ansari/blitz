@@ -20,7 +20,7 @@ const icons = [
   //   title: "Download Portal.io",
   // },
   {
-    link: '',
+    link: 'settings',
     icon: <IoMdSettings className={classes.icon} />,
     title: 'Settings',
   },
