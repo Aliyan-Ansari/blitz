@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Textarea, Button } from '@chakra-ui/react';
+import { Textarea, Button, useDisclosure } from '@chakra-ui/react';
 import PrimarySidebar from '../../components/PrimarySidebar';
 import SecondarySidebar from '../../components/SecondarySidebar';
 import classes from './Settings.module.css';
+import CustomModal from '../../components/CustomModal/CustomModal';
 const Settings = () => {
   const primaryRef = useRef(null);
   const secondaryRef = useRef(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [modalState, setModalState] = useState({title:'Email'})
   const [isPrimarySideBarActive, setIsPrimarySidebarActive] = useState(false);
   const [isSecondarySideBarActive, setIsSecondarySidebarActive] =
     useState(false);
@@ -13,7 +16,6 @@ const Settings = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-
   useEffect(() => {
     const handleResize = () => {
       setScreenSize({
@@ -58,6 +60,11 @@ const Settings = () => {
     };
   }, [secondaryRef]);
 
+  //handling the state of modal
+  const handleModal =(state)=>{
+    setModalState({title:state});
+    onOpen()
+  }
   return (
     <div className={classes.setting}>
       <div className={classes.mainContainer}>
@@ -83,6 +90,7 @@ const Settings = () => {
                     colorScheme='red'
                     variant={'ghost'}
                     style={{ width: '220px' }}
+                    onClick={()=>handleModal('Email')}
                   >
                     Change Email
                   </Button>
@@ -95,6 +103,7 @@ const Settings = () => {
                     colorScheme='red'
                     variant={'ghost'}
                     style={{ width: '220px' }}
+                    onClick={()=>handleModal('Password')}
                   >
                     Change Password
                   </Button>
@@ -107,6 +116,7 @@ const Settings = () => {
                     colorScheme='red'
                     variant={'ghost'}
                     style={{ width: '220px' }}
+                    onClick={()=>handleModal('Username')}
                   >
                     Change Username
                   </Button>
@@ -119,6 +129,7 @@ const Settings = () => {
                     colorScheme='red'
                     variant={'ghost'}
                     style={{ width: '220px' }}
+                    onClick={()=>handleModal('Card')}
                   >
                     Add / Change Card
                   </Button>
@@ -163,6 +174,7 @@ const Settings = () => {
           </div>
         </div>
       </div>
+      <CustomModal isOpen={isOpen} onClose={onClose} modalState={modalState}/>
     </div>
   );
 };
