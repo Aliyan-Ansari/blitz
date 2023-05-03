@@ -5,6 +5,7 @@ import classes from './Arena.module.css';
 import { FaSearch } from 'react-icons/fa';
 import { MdWatchLater } from 'react-icons/md';
 import { ArenaTable } from '../../components/CustomTable/CustomTable';
+import GameDetails from '../../components/GameDetails';
 const Arena = () => {
   const [active, setActive] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -75,7 +76,7 @@ const Arena = () => {
           ></path>
         </svg>
       ),
-      title: 'League of Legends',
+      title: 'Call Of Duty',
     },
     {
       icon: (
@@ -101,7 +102,7 @@ const Arena = () => {
           ></path>
         </svg>
       ),
-      title: 'Teamfight Tactics',
+      title: 'Fortnite',
       imageUrl:'https://blitz-cdn.blitz.gg/blitz/ui/img/arena/empty-state-tft.webp',
     },
     {
@@ -301,9 +302,12 @@ const Arena = () => {
             </div>
               )
             }
-            <div className={classes.table}>
-              <ArenaTable />
+            <div>
+              <GameDetails/>
             </div>
+            {/* <div className={classes.table}>
+              <ArenaTable />
+            </div> */}
             <div className={classes.cardContent}>
               <div className={classes.headerSection}>
                 <h4 className={classes.typeSubtitle2}>

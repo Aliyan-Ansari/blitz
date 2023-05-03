@@ -49,7 +49,7 @@ const Overlays = () => {
           ></path>
         </svg>
       ),
-      title: 'League of Legends',
+      title: 'Call Of Duty',
       cards: [
         {
           url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/lol-itemdifference-minv3.webp',
@@ -137,7 +137,7 @@ const Overlays = () => {
           ></path>
         </svg>
       ),
-      title: 'Teamfight Tactics',
+      title: 'Fortnite',
       cards: [
         {
           url: 'https://blitz-cdn.blitz.gg/blitz/ui/img/settings/tftOverlay/tft-augmentinfo-sm.webp',

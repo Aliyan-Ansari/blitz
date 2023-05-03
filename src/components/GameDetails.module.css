@@ -1,5 +1,5 @@
 .gameDetails {
-    max-width: calc(62.5rem + calc(0.25 * 4rem) * 2);
+    max-width: calc(62.5rem + calc(0.25 * 3rem) * 2);
     display: flex;
     flex-wrap: wrap;
     align-items: center;

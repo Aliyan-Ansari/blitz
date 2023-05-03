@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { Tilt } from 'react-tilt';
 import { FaSearch } from 'react-icons/fa';
-import GameDetails from '../../components/GameDetails';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import HeaderSlider from '../../components/HeaderSlider';
 import PrimarySidebar from '../../components/PrimarySidebar';
 import SecondarySidebar from '../../components/SecondarySidebar';
-import DetailSection from '../../components/DetailSection';
 import classes from './GameGuides.module.css';
 
 const defaultOptions = {
@@ -33,9 +28,9 @@ function Card(data) {
               gridColumnStart: 1,
               gridColumnEnd: 3,
               background:
-                'linear-gradient(270deg, rgba(24, 27, 33, 0) 0%, #181b21 100%), url(https://blitz-cdn.blitz.gg/blitz/game-guide/CompsTileBG.webp)',
+                `linear-gradient(270deg, rgba(24, 27, 33, 0) 0%, #181b21 100%), url(${data?.url})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center center',
+              // backgroundPosition: 'top left',
               backgroundRepeat: 'no-repeat',
               // width: 'calc(0.25 * 133rem)',
               position: 'relative',
@@ -126,7 +121,7 @@ const GameGuides = () => {
           ></path>
         </svg>
       ),
-      title: 'League of Legends',
+      title: 'Call Of Duty',
       cards: [
         {
           icon: (
@@ -146,7 +141,7 @@ const GameGuides = () => {
             </svg>
           ),
           title: 'Statistics',
-          url: '',
+          url: 'https://www.nme.com/wp-content/uploads/2022/11/Call-of-Duty-ranked.jpg',
           description:
             'View in depth champion stats like win rate, synergies, and more.',
         },
@@ -223,7 +218,7 @@ const GameGuides = () => {
           ></path>
         </svg>
       ),
-      title: 'Teamfight Tactics',
+      title: 'Fortnite',
       cards: [
         {
           icon: (
@@ -242,7 +237,7 @@ const GameGuides = () => {
               ></path>
             </svg>
           ),
-          url: 'https://blitz-cdn.blitz.gg/blitz/game-guide/CompsTileBG.webp',
+          url: 'https://i.insider.com/5daa24d7cc4a0a62650c6b28?width=700',
           title: 'Comps',
           description: 'Tap compositions in the meta.',
         },
@@ -348,7 +343,7 @@ const GameGuides = () => {
       title: 'Valorant',
       cards: [
         {
-          url: '',
+          url: 'https://images2.minutemediacdn.com/image/upload/c_crop,w_1280,h_720,x_0,y_0/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/dbltap_en_international_web/01fkpb8p0dcr0xrx5j7d.jpg',
           icon: (
             <svg
               width='24'
