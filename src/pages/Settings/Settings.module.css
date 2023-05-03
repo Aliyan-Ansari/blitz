@@ -1,0 +1,161 @@
+.setting{
+    width: 100%;
+    height: 100vh;
+    background-color: #0e1015;
+}
+
+.mainContainer{
+    width: 100%;
+    display: flex;
+    background-color: #0e1015;
+}
+
+.primarySidebar{
+    flex: 1;
+
+}
+.mainWrapper{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    margin-left: calc(calc(0.25 * 1rem) * 18);
+    margin-right: calc(calc(0.25 * 1rem) * 18);
+    width: 100%;
+    color: white;
+    --scroll-color: hsla(222deg 7% 30% / 0.5)
+    background: hsla(222deg 20% 7% / 1);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.mainContent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.heading {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.009em;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.formData {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow */
+}
+
+.formContainer {
+    width: 80%;
+}
+
+.listedEmail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.listedPassword {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.listedUserName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.paymentInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.contactSupport {
+    margin: 15px 0px;
+}
+
+.contactSupport {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.headingString {
+    font-size: larger;
+    color: rgb(165, 165, 165);
+}
+.headingString span {
+    color: #CF3834;
+}
+
+.emailText {
+
+}
+
+.signOut {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.signOut button {
+    width: 250px;
+}
+
+
+
+.mobileIcons {
+    display: none;
+}
+
+
+@media screen and (max-width: 1510px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 18);
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (min-width: 1511px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 18);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .mainWrapper {
+        margin-left: calc(calc(0.25 * 1rem) * 4);
+        margin-right: calc(calc(0.25 * 1rem) * 4);
+        overflow-y: hidden;color: white;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 11111;
+        width: 98%;
+        background-color: hsla(222deg 20% 7% / 0.75);
+        backdrop-filter: blur(20px);
+    }
+}
