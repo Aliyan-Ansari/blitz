@@ -12,6 +12,7 @@ import {
 } from 'react-router-dom';
 import GameGuides from './pages/GameGuides/GameGuides';
 import Account from './pages/Account/Account';
+import Settings from './pages/Settings/Settings';
 
 function App() {
   const router = createBrowserRouter([
@@ -52,6 +53,14 @@ function App() {
       element: (
         <div className='App'>
           <Account />
+        </div>
+      ),
+    },
+    {
+      path: 'settings',
+      element: (
+        <div className='App'>
+          <Settings />
         </div>
       ),
     },
