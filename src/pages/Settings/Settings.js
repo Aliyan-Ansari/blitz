@@ -84,7 +84,7 @@ const Settings = () => {
           <div className={classes.formData}>
             <div className={classes.formContainer}>
               <div className={classes.listedEmail}>
-                <div className={classes.emailText}>abc@gmail.com</div>
+                <div className={classes.typeTitle}>player312@gmail.com</div>
                 <div className={classes.emailButton}>
                   <Button
                     colorScheme='red'
@@ -97,7 +97,7 @@ const Settings = () => {
                 </div>
               </div>
               <div className={classes.listedPassword}>
-                <div className={classes.passwordText}>**********</div>
+                <div className={classes.typeTitle}>**********</div>
                 <div className={classes.passwordButton}>
                   <Button
                     colorScheme='red'
@@ -110,7 +110,7 @@ const Settings = () => {
                 </div>
               </div>
               <div className={classes.listedUserName}>
-                <div className={classes.userNameText}>Player312</div>
+                <div className={classes.typeTitle}>Player_312</div>
                 <div className={classes.userNameButton}>
                   <Button
                     colorScheme='red'
@@ -123,7 +123,7 @@ const Settings = () => {
                 </div>
               </div>
               <div className={classes.paymentInfo}>
-                <div className={classes.cardNumber}>**** **** **** 1111</div>
+                <div className={classes.typeTitle}>1111 **** **** 1111</div>
                 <div className={classes.userNameButton}>
                   <Button
                     colorScheme='red'
@@ -135,12 +135,12 @@ const Settings = () => {
                   </Button>
                 </div>
               </div>
-              <div className={classes.listedEmail}>
+              <div className={classes.listedSubscription}>
                 <h4 className={classes.headingString}>
                   Current Subscription is of <span>{'$12.00'}</span>
                 </h4>
               </div>
-              <div className={classes.listedEmail}>
+              <div className={classes.listedSubscription}>
                 <h4 className={classes.headingString}>
                   Next payment is due in {new Date().toDateString()}
                 </h4>
@@ -158,7 +158,6 @@ const Settings = () => {
                   Send
                 </Button>
               </div>
-              <div className={classes.listedEmail}></div>
             </div>
           </div>
           <div className={classes.secondarySidebar}>

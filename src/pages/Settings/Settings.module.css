@@ -50,7 +50,7 @@
     justify-content: flex-start;
     margin-bottom: 20px;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .formData {
     width: 100%;
@@ -69,6 +69,9 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 20px;
+    background-color: rgba(54, 54, 54, 0.705);
+    padding: 10px;
+    border-radius: 6px;
 }
 
 .listedPassword {
@@ -76,6 +79,9 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 20px;
+    background-color: rgba(54, 54, 54, 0.705);
+    padding: 10px;
+    border-radius: 6px;
 }
 
 .listedUserName {
@@ -83,6 +89,9 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 20px;
+    background-color: rgba(54, 54, 54, 0.705);
+    padding: 10px;
+    border-radius: 6px;
 }
 
 .paymentInfo {
@@ -90,10 +99,21 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 20px;
+    background-color: rgba(54, 54, 54, 0.705);
+    padding: 10px;
+    border-radius: 6px;
 }
-
+.listedSubscription{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 20px;
+    background-color: rgba(54, 54, 54, 0.705);
+    padding: 10px;
+    border-radius: 6px;
+}
 .contactSupport {
-    margin: 15px 0px;
+    margin: 15px 20px;
 }
 
 .contactSupport {
@@ -107,6 +127,10 @@
     font-size: larger;
     color: rgb(165, 165, 165);
 }
+.typeTitle{
+    font-size: larger;
+
+}
 .headingString span {
     color: #CF3834;
 }
@@ -119,6 +143,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    margin-right: 20px;
 }
 
 .signOut button {
